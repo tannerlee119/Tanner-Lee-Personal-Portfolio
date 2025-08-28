@@ -25,15 +25,15 @@ export function About() {
           <div className="prose prose-lg max-w-none">
             <div className="text-gray-300 leading-relaxed space-y-6">
               <p className="text-lg">
-                I&apos;m a passionate full-stack developer recently graduated with a Bachelor&apos;s degree in Computer Science 
+                I&apos;m a passionate software developer recently graduated with a Bachelor&apos;s degree in Computer Science 
                 from the University of Wisconsin-Madison.
               </p>
               
               <p className="text-lg">
-                Currently studying abroad at Korea University in Seoul, I&apos;m expanding my global perspective 
-                while diving deeper into advanced computer science concepts. This international experience 
-                has not only broadened my technical skills but also enhanced my ability to collaborate 
-                across cultures and adapt to new environments.
+                My journey into technology began with a curiosity about how things work and evolved into a 
+                deep love for building solutions that make a meaningful impact. Through my studies and 
+                various experiences, I&apos;ve developed strong technical skills while also learning to 
+                collaborate across cultures and adapt to new environments.
               </p>
               
               <p className="text-lg">

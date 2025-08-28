@@ -15,7 +15,7 @@ const contactMethods = [
     label: 'Phone',
     value: '(425) 735-3055',
     href: 'tel:+14257353055',
-    description: 'Available for calls'
+    description: 'Available for calls with notice'
   },
   {
     icon: MapPin,

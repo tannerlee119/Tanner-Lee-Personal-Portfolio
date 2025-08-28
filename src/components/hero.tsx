@@ -13,7 +13,7 @@ export function Hero() {
   const handleDownloadResume = () => {
     // Create a link to download the resume
     const link = document.createElement('a')
-    link.href = '/public/Tanner Lee Resume.pdf' // We'll need to move the resume to the public folder
+    link.href = '/Tanner Lee Resume.pdf'
     link.download = 'Tanner_Lee_Resume.pdf'
     document.body.appendChild(link)
     link.click()
@@ -46,13 +46,11 @@ export function Hero() {
             </h1>
             
             <h2 className="text-2xl sm:text-3xl font-semibold text-gray-400 mb-6">
-              Full-Stack Developer
+              Software Developer
             </h2>
             
             <p className="text-lg text-gray-300 mb-8 max-w-2xl mx-auto lg:mx-0 leading-relaxed">
-              Computer Science student at UW-Madison with experience building scalable web applications. 
-              Currently studying abroad at Korea University, passionate about creating innovative solutions 
-              that make a meaningful impact.
+              Recent Computer Science graduate from UW-Madison with experience building scalable web applications. 
             </p>
 
             {/* Call-to-Action Buttons */}
