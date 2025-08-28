@@ -1,0 +1,193 @@
+Product Requirements Document: Personal Portfolio Website
+
+Author: Tanner Lee
+
+Version: 2.0
+
+Date: August 28, 2025
+
+
+
+1. Introduction & Vision
+
+This document provides a comprehensive specification for the personal portfolio website of Tanner Lee. The website's primary purpose is to serve as a dynamic, professional showcase of Tanner's software development skills, projects, and experience.
+
+The vision is to create a polished, high-performance, single-page application that not only functions as a digital resume but also communicates Tanner's personal brand: a modern, detail-oriented, and personable full-stack developer. The site will be built with a modern tech stack (Next.js, Tailwind CSS, shadcn/ui) and deployed on Vercel.
+
+
+
+2. Target Audience
+
+Primary: Recruiters and Hiring Managers at tech companies. They require a fast, scannable, and impressive overview of technical capabilities and professional experience.
+
+Secondary: Fellow developers, potential collaborators, and network contacts. They will be more interested in project details, code quality (via GitHub links), and technical skills.
+
+3. Design & UX/UI Specifications
+
+This section defines the website's aesthetic and interactive elements, based on the "Classic Tech (Dark Mode)" theme.
+
+
+
+3.1. Visual Identity
+
+Color Palette:
+
+Background: Off-black (#111827 - Slate 900 in Tailwind). Provides a deep, focused canvas.
+
+Text & Headings: Off-white (#F3F4F6 - Gray 100). Ensures high readability without being harsh.
+
+Secondary Text: Light gray (#9CA3AF - Gray 400). For dates, subtitles, and less critical information.
+
+Primary Accent: Vibrant Blue (#3B82F6 - Blue 500). To be used for all interactive elements: buttons, links, hover states, and highlights to guide the user's eye.
+
+Typography:
+
+Font: "Inter" (or a similar modern sans-serif). It's highly legible on screens and has a clean, neutral feel appropriate for a tech portfolio.
+
+Headings: Semi-Bold or Bold weight to create a clear visual hierarchy.
+
+Body Text: Regular weight for maximum readability.
+
+Iconography: Use a consistent, clean icon set (like Lucide Icons, which integrates with shadcn/ui) for external links (GitHub, LinkedIn), project links, and skills.
+
+3.2. Layout & Responsiveness
+
+Structure: A vertical, single-page application with a sticky navigation bar for seamless navigation between sections.
+
+Spacing: Generous use of white space (or "dark space") to prevent a cluttered feel and improve content focus.
+
+Responsive Breakpoints:
+
+Mobile (< 768px): A single-column layout. Cards, images, and text blocks will stack vertically. The navigation bar may collapse into a hamburger menu.
+
+Tablet/Desktop (> 768px): Multi-column grids for projects and skills. Side-by-side layouts for the hero and about sections.
+
+3.3. Micro-interactions & Animations
+
+Goal: To enhance the user experience without being distracting. Animations should be subtle and purposeful.
+
+Specifics:
+
+On Scroll: Gentle fade-in and slide-up animations for sections as they enter the viewport.
+
+Hover States:
+
+Buttons and links should subtly brighten or change color.
+
+Project and Experience cards should "lift" slightly (using a scale transform and a subtle box-shadow) to provide tactile feedback.
+
+Navigation: Smooth scrolling between sections when a nav link is clicked.
+
+4. Detailed Feature & Section Breakdown
+
+4.1. Navigation Bar (Sticky)
+
+Component: A clean, unobtrusive bar at the top of the viewport.
+
+Content (Desktop): Tanner Lee (Logo/Name), About, Experience, Projects, Contact.
+
+Content (Mobile): Tanner Lee (Logo/Name) on the left, Hamburger Menu icon on the right that opens a drawer with navigation links.
+
+Functionality: An active state (highlighted with the accent color) should indicate which section the user is currently viewing.
+
+4.2. Hero Section
+
+Layout: Two-column on desktop (image left, text right), stacks on mobile.
+
+Left Column: A professional, high-quality Avatar of Tanner.
+
+Right Column:
+
+<h1>: Main headline (e.g., "Tanner Lee").
+
+<h2>: Sub-headline (e.g., "Full-Stack Developer").
+
+<p>: A brief, engaging bio (2-3 sentences).
+
+CTAs: A group of Button components:
+
+Primary Button (filled with accent color): "Contact Me" (scrolls to contact section).
+
+Secondary/Ghost Buttons: GitHub, LinkedIn, and "Download Resume" (each with an appropriate icon).
+
+4.3. About Me Section
+
+Layout: A single column with clear headings to break up the text.
+
+Content:
+
+Narrative: A paragraph expanding on your journey, passion for problem-solving, and mention of your study at Korea University.
+
+Interests: A visually separate subsection, perhaps using "pills" or a small grid, to showcase your interests (Bouldering, Piano, etc.) and add personality.
+
+4.4. Experience Section
+
+Structure: Two distinct sub-sections with clear headings: "Technical Experience" and "Leadership & Community Involvement".
+
+Component: Each role will be presented in a Card component.
+
+Card Content:
+
+Top Row: Organization Logo, Organization Name (Bold), Role Title (Italic).
+
+Second Row: Dates (Secondary Text color).
+
+Body: A bulleted list detailing responsibilities and achievements.
+
+4.5. Projects Section
+
+Layout: A responsive grid (e.g., 2-column on tablet, 3-column on large desktops, 1-column on mobile).
+
+Component: Each project will be a detailed Card.
+
+Card Content:
+
+Image: A high-quality screenshot or GIF of the project. This is the most important part of the card.
+
+Title: <h3> with the project name.
+
+Description: A concise 1-2 sentence summary.
+
+Tech Stack: A row of Badge components (pills) for each technology used (e.g., "React", "TypeScript", "Firebase").
+
+Links: A row of icon buttons (GitHub, Live Demo) for easy access.
+
+4.6. Skills Section
+
+Layout: A grid layout with categorized columns (Languages, Technologies, Tools).
+
+Visuals: Instead of a simple list, each skill will be presented as a Badge or a small card with the technology's name and icon for a more engaging and scannable presentation.
+
+4.7. Contact Section
+
+Layout: Centered content with a clear call to action.
+
+Content:
+
+<h2>: "Get In Touch" or "Let's Connect".
+
+<p>: A brief sentence inviting collaboration or inquiries.
+
+Contact Info: A clickable mailto: link with a mail icon, and repeated icon links to GitHub and LinkedIn.
+
+5. Accessibility
+
+WCAG Compliance: The website should strive for AA compliance.
+
+Requirements:
+
+Semantic HTML: Use proper tags (<nav>, <main>, <section>, <h1>, etc.).
+
+Image Alt Text: All images (profile photo, logos, project screenshots) must have descriptive alt text.
+
+Color Contrast: The chosen color palette must meet minimum contrast ratios.
+
+Keyboard Navigation: The site must be fully navigable using only a keyboard.
+
+6. Future Enhancements (Roadmap)
+
+Blog/Writing Section: A future section to host articles or blog posts to demonstrate thought leadership.
+
+Detailed Project Pages: Clicking a project card could lead to a separate page with an in-depth case study.
+
+Advanced Animations: Integration with a library like Framer Motion for more complex page transitions and animations.
