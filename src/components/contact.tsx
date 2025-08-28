@@ -20,9 +20,9 @@ const contactMethods = [
   {
     icon: MapPin,
     label: 'Location',
-    value: 'Seoul, South Korea',
+    value: 'Redmond, Washington',
     href: null,
-    description: 'Currently studying abroad'
+    // description: 'Currently studying abroad'
   }
 ]
 
@@ -30,14 +30,14 @@ const socialLinks = [
   {
     icon: Github,
     label: 'GitHub',
-    href: 'https://github.com/tannerlee',
+    href: 'https://github.com/tannerlee110',
     description: 'Check out my code'
   },
   {
     icon: Linkedin,
     label: 'LinkedIn',
-    href: 'https://linkedin.com/in/tanner-lee2022',
-    description: 'Let&apos;s connect professionally'
+    href: 'https://linkedin.com/in/tannerlee119',
+    description: 'Let\'s connect  '
   }
 ]
 
@@ -100,7 +100,7 @@ export function Contact() {
 
             {/* Social Links */}
             <div className="space-y-4">
-              <h4 className="text-lg font-semibold text-gray-100">Find Me Online</h4>
+              <h4 className="text-lg font-semibold text-gray-100">Find Me</h4>
               <div className="flex gap-4">
                 {socialLinks.map((social, index) => (
                   <Button
@@ -138,14 +138,13 @@ export function Contact() {
               <CardContent className="space-y-6">
                 <div className="text-center">
                   <p className="text-gray-300 mb-6">
-                    I&apos;m currently open to:
+                    I&apos;m currently looking for:
                   </p>
                   <ul className="text-gray-300 text-sm space-y-2 text-left list-disc list-inside mb-6">
                     <li>Full-time software development opportunities</li>
                     <li>Freelance and consulting projects</li>
                     <li>Open source collaborations</li>
                     <li>Technical discussions and mentorship</li>
-                    <li>Speaking opportunities and workshops</li>
                   </ul>
                 </div>
 
@@ -174,7 +173,7 @@ export function Contact() {
                   <div>
                     <p className="text-gray-100 font-medium">Currently Available</p>
                     <p className="text-gray-400 text-sm">
-                      Actively seeking opportunities starting May 2025
+                      Actively seeking opportunities
                     </p>
                   </div>
                 </div>
