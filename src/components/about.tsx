@@ -1,14 +1,14 @@
 import { Badge } from '@/components/ui/badge'
 import { Card, CardContent } from '@/components/ui/card'
-import { Music, Mountain, Coffee, Users, Theater, Trophy } from 'lucide-react'
+import { Music, Mountain, Coffee, Footprints, Theater, Trophy } from 'lucide-react'
 
 const interests = [
   { name: 'Piano', icon: Music, description: '16 years of experience' },
   { name: 'Bouldering', icon: Mountain, description: 'Rock climbing enthusiast' },
   { name: 'Food Blogging', icon: Coffee, description: 'Culinary exploration' },
   { name: 'Theatre', icon: Theater, description: 'Creative expression' },
-  { name: 'Running', icon: Trophy, description: 'HS Track Captain' },
-  { name: 'Tae Kwon Do', icon: Users, description: 'Martial arts discipline' }
+  { name: 'Running', icon: Footprints, description: 'HS Track Captain' },
+  { name: 'Tae Kwon Do', icon: Trophy, description: 'Third-Degree Black Belt and Instructor' }
 ]
 
 export function About() {
@@ -25,10 +25,8 @@ export function About() {
           <div className="prose prose-lg max-w-none">
             <div className="text-gray-300 leading-relaxed space-y-6">
               <p className="text-lg">
-                I&apos;m a passionate full-stack developer currently pursuing my Bachelor&apos;s in Computer Science 
-                at the University of Wisconsin-Madison. My journey into technology began with a curiosity 
-                about how things work and evolved into a deep love for building solutions that make a 
-                meaningful impact.
+                I&apos;m a passionate full-stack developer recently graduated with a Bachelor&apos;s degree in Computer Science 
+                from the University of Wisconsin-Madison.
               </p>
               
               <p className="text-lg">
@@ -83,7 +81,7 @@ export function About() {
                 Continuous Learning
               </Badge>
               <Badge variant="secondary" className="px-4 py-2 text-sm">
-                Collaborative Spirit
+                Collaboration
               </Badge>
               <Badge variant="secondary" className="px-4 py-2 text-sm">
                 User-Centered Design

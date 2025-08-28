@@ -32,7 +32,7 @@ Based on the PRD, this will be a modern single-page application (SPA) built with
 
 1. **Hero Section**: Professional avatar, headline, bio, and CTA buttons
 2. **About Section**: Personal narrative and interests
-3. **Experience Section**: Technical experience and leadership roles in card format
+3. **Experience Section**: Technical experience, leadership roles, and customer service positions in card format
 4. **Projects Section**: Grid layout with project cards containing screenshots, tech stack badges, and links
 5. **Skills Section**: Categorized skills with badges/icons
 6. **Contact Section**: Contact information and social links

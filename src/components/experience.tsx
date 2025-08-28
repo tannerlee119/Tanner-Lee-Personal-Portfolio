@@ -52,6 +52,21 @@ const leadershipExperience = [
     technologies: ['Content Creation', 'Video Production', 'Community Management', 'Social Media Strategy']
   },
   {
+    organization: 'HopeLink',
+    position: 'Food Bank Volunteer',
+    location: 'Kirkland, WA',
+    period: 'June 2021 - August 2022',
+    logo: '/logos/hopelink-logo.png',
+    description: 'Community service and food distribution support',
+    achievements: [
+      'Collaborated within volunteer teams to sort, inspect, and categorize donations, processing over 1,000 pounds of food weekly',
+      'Managed inventory by stocking shelves, rotating products to ensure freshness, and maintaining organized warehouse environment',
+      'Directly assisted in distribution process, assembling food packages for dozens of families daily',
+      'Provided welcoming and dignified experience for all clients while maintaining food safety standards'
+    ],
+    technologies: ['Team Collaboration', 'Inventory Management', 'Community Service', 'Food Safety Standards']
+  },
+  {
     organization: 'Hwang\'s Tae Kwon Do',
     position: 'Instructor',
     location: 'Redmond, WA',
@@ -68,8 +83,41 @@ const leadershipExperience = [
   }
 ]
 
+const serviceExperience = [
+  {
+    organization: 'HWY1',
+    position: 'Counter Server',
+    location: 'Madison, WI',
+    period: 'May 2025 - August 2025',
+    logo: '/logos/hwy1-logo.png',
+    description: 'Customer service in high-volume restaurant environment',
+    achievements: [
+      'Provided excellent customer service in fast-paced environment, assembling customized orders accurately',
+      'Operated Point of Sale system to process payments and handle cash/credit transactions',
+      'Maintained strict adherence to food safety and sanitation standards with daily temperature logs',
+      'Upsold promotional items while ensuring customer satisfaction and service quality'
+    ],
+    technologies: ['Customer Service', 'Food Safety', 'POS Systems', 'Team Collaboration']
+  },
+  {
+    organization: 'Miko Poké',
+    position: 'Counter Server and Prep Cook',
+    location: 'Madison, WI',
+    period: 'January 2024 - May 2025',
+    logo: '/logos/miko-poke-logo.png',
+    description: 'Food service and kitchen operations',
+    achievements: [
+      'Served over 100 customers daily ensuring prompt service and satisfaction',
+      'Prepared 10+ fresh ingredients and assembled over 200 bowls per shift with <1% error rate',
+      'Contributed to increasing store ratings from 4.0 to 4.5 stars on Google through consistent quality',
+      'Maintained high standards of food preparation and customer interaction'
+    ],
+    technologies: ['Food Preparation', 'Customer Service', 'Quality Control', 'Kitchen Operations']
+  }
+]
+
 interface ExperienceCardProps {
-  item: typeof technicalExperience[0] | typeof leadershipExperience[0]
+  item: typeof technicalExperience[0] | typeof leadershipExperience[0] | typeof serviceExperience[0]
 }
 
 function ExperienceCard({ item }: ExperienceCardProps) {
@@ -115,7 +163,7 @@ function ExperienceCard({ item }: ExperienceCardProps) {
           <ul className="space-y-2">
             {item.achievements.map((achievement, index) => (
               <li key={index} className="text-gray-300 text-sm flex items-start gap-2">
-                <span className="text-blue-500 mt-2 flex-shrink-0">•</span>
+                <span className="text-blue-500 mt-0.5 flex-shrink-0">•</span>
                 <span className="leading-relaxed">{achievement}</span>
               </li>
             ))}
@@ -171,6 +219,22 @@ export function Experience() {
             
             <div className="grid gap-6 md:grid-cols-1 lg:grid-cols-2">
               {leadershipExperience.map((item, index) => (
+                <ExperienceCard key={index} item={item} />
+              ))}
+            </div>
+          </div>
+
+          {/* Customer Service & Hospitality */}
+          <div>
+            <h3 className="text-2xl font-semibold text-gray-100 mb-8 flex items-center gap-3">
+              <span className="w-8 h-8 bg-blue-500 rounded-lg flex items-center justify-center">
+                <span className="text-white text-sm">🍽️</span>
+              </span>
+              Customer Service & Hospitality
+            </h3>
+            
+            <div className="grid gap-6 md:grid-cols-1 lg:grid-cols-2">
+              {serviceExperience.map((item, index) => (
                 <ExperienceCard key={index} item={item} />
               ))}
             </div>
