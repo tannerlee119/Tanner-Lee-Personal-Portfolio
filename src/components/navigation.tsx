@@ -35,9 +35,14 @@ export function Navigation() {
 
   const handleNavClick = (href: string) => {
     setIsOpen(false)
-    const element = document.querySelector(href)
-    if (element) {
-      element.scrollIntoView({ behavior: 'smooth' })
+    if (href === '#') {
+      // Scroll to top
+      window.scrollTo({ top: 0, behavior: 'smooth' })
+    } else {
+      const element = document.querySelector(href)
+      if (element) {
+        element.scrollIntoView({ behavior: 'smooth' })
+      }
     }
   }
 
@@ -49,7 +54,7 @@ export function Navigation() {
           <div className="flex-shrink-0">
             <button 
               onClick={() => handleNavClick('#')}
-              className="text-xl font-bold text-blue-500 hover:text-blue-400 transition-colors"
+              className="text-xl font-bold text-blue-500 hover:text-blue-400 transition-colors cursor-pointer"
               aria-label="Scroll to top"
             >
               Tanner Lee
@@ -63,7 +68,7 @@ export function Navigation() {
                 <button
                   key={item.name}
                   onClick={() => handleNavClick(item.href)}
-                  className={`px-3 py-2 text-sm font-medium transition-colors hover:text-blue-500 ${
+                  className={`px-3 py-2 text-sm font-medium transition-colors hover:text-blue-500 cursor-pointer ${
                     activeSection === item.href.slice(1)
                       ? 'text-blue-500'
                       : 'text-gray-300'
@@ -97,7 +102,7 @@ export function Navigation() {
               <button
                 key={item.name}
                 onClick={() => handleNavClick(item.href)}
-                className={`block px-3 py-2 text-base font-medium transition-colors hover:text-blue-500 w-full text-left ${
+                className={`block px-3 py-2 text-base font-medium transition-colors hover:text-blue-500 w-full text-left cursor-pointer ${
                   activeSection === item.href.slice(1)
                     ? 'text-blue-500'
                     : 'text-gray-300'

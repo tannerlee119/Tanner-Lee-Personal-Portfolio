@@ -10,7 +10,7 @@ const projects = [
     longDescription: 'Built with React, TypeScript, Node.js, and PostgreSQL using Drizzle ORM. Features Google Places API integration for restaurant discovery, interactive map visualization with custom markers, geocoding, and a comprehensive bookmarking system with external data synchronization.',
     image: '/projects/biterank.png',
     technologies: ['React', 'TypeScript', 'Node.js', 'PostgreSQL', 'Drizzle ORM', 'Google Places API', 'Maps Integration'],
-    githubUrl: 'https://github.com/tannerlee/biterank',
+    githubUrl: 'https://github.com/tannerlee119/BiteRank',
     liveUrl: 'https://biterank.vercel.app',
     featured: true
   },
