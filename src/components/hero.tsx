@@ -13,7 +13,7 @@ export function Hero() {
   const handleDownloadResume = () => {
     // Create a link to download the resume
     const link = document.createElement('a')
-    link.href = '/Tanner Lee Resume.pdf' // We'll need to move the resume to the public folder
+    link.href = '/public/Tanner Lee Resume.pdf' // We'll need to move the resume to the public folder
     link.download = 'Tanner_Lee_Resume.pdf'
     document.body.appendChild(link)
     link.click()
@@ -72,7 +72,7 @@ export function Hero() {
                   asChild
                 >
                   <a 
-                    href="https://github.com/tannerlee" 
+                    href="https://github.com/tannerlee119" 
                     target="_blank" 
                     rel="noopener noreferrer"
                     aria-label="Visit Tanner's GitHub profile"
@@ -87,7 +87,7 @@ export function Hero() {
                   asChild
                 >
                   <a 
-                    href="https://linkedin.com/in/tanner-lee2022" 
+                    href="https://linkedin.com/in/tannerlee119" 
                     target="_blank" 
                     rel="noopener noreferrer"
                     aria-label="Visit Tanner's LinkedIn profile"
