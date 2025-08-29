@@ -33,9 +33,6 @@ export function Hero() {
                 className="object-cover"
                 loading="eager"
               />
-              <AvatarFallback className="text-6xl font-bold bg-blue-500 text-white">
-
-              </AvatarFallback>
             </Avatar>
           </div>
 
