@@ -335,3 +335,107 @@
     background-position: 100% 50%;
   }
 }
+
+/* Grand section transitions */
+@keyframes sectionSlideIn {
+  0% {
+    transform: translateX(100vw) scale(0.8) rotateY(45deg);
+    opacity: 0;
+    filter: blur(20px);
+  }
+  50% {
+    transform: translateX(0) scale(0.9) rotateY(10deg);
+    opacity: 0.7;
+    filter: blur(5px);
+  }
+  100% {
+    transform: translateX(0) scale(1) rotateY(0deg);
+    opacity: 1;
+    filter: blur(0);
+  }
+}
+
+@keyframes sectionSlideOut {
+  0% {
+    transform: translateX(0) scale(1) rotateY(0deg);
+    opacity: 1;
+    filter: blur(0);
+  }
+  50% {
+    transform: translateX(-50vw) scale(0.9) rotateY(-10deg);
+    opacity: 0.3;
+    filter: blur(5px);
+  }
+  100% {
+    transform: translateX(-100vw) scale(0.8) rotateY(-45deg);
+    opacity: 0;
+    filter: blur(20px);
+  }
+}
+
+@keyframes sectionZoomIn {
+  0% {
+    transform: scale(0.5) rotateX(45deg);
+    opacity: 0;
+    filter: blur(30px);
+  }
+  50% {
+    transform: scale(0.8) rotateX(20deg);
+    opacity: 0.5;
+    filter: blur(10px);
+  }
+  100% {
+    transform: scale(1) rotateX(0deg);
+    opacity: 1;
+    filter: blur(0);
+  }
+}
+
+@keyframes sectionFlipIn {
+  0% {
+    transform: rotateY(90deg) scale(0.8);
+    opacity: 0;
+    filter: blur(15px);
+  }
+  50% {
+    transform: rotateY(45deg) scale(0.9);
+    opacity: 0.7;
+    filter: blur(5px);
+  }
+  100% {
+    transform: rotateY(0deg) scale(1);
+    opacity: 1;
+    filter: blur(0);
+  }
+}
+
+.section-transition-container {
+  perspective: 2000px;
+  transform-style: preserve-3d;
+}
+
+.section-slide-in {
+  animation: sectionSlideIn 1s cubic-bezier(0.25, 0.46, 0.45, 0.94) forwards;
+}
+
+.section-slide-out {
+  animation: sectionSlideOut 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94) forwards;
+}
+
+.section-zoom-in {
+  animation: sectionZoomIn 1.2s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+.section-flip-in {
+  animation: sectionFlipIn 1s cubic-bezier(0.25, 0.46, 0.45, 0.94) forwards;
+}
+
+.section-entering {
+  transform-origin: center center;
+  backface-visibility: hidden;
+}
+
+.section-exiting {
+  transform-origin: center center;
+  backface-visibility: hidden;
+}

@@ -8,6 +8,7 @@ import { Projects } from '@/components/projects'
 import { Skills } from '@/components/skills'
 import { Contact } from '@/components/contact'
 import { ScrollToTop } from '@/components/scroll-to-top'
+import { SectionTransition } from '@/components/section-transition'
 
 export default function Home() {
   return (
@@ -15,12 +16,29 @@ export default function Home() {
       <Navigation />
       
       <main>
-        <Hero />
-        <About />
-        <Experience />
-        <Projects />
-        <Skills />
-        <Contact />
+        <SectionTransition sectionIndex={0} transitionType="zoom">
+          <Hero />
+        </SectionTransition>
+        
+        <SectionTransition sectionIndex={1} transitionType="slide">
+          <About />
+        </SectionTransition>
+        
+        <SectionTransition sectionIndex={2} transitionType="flip">
+          <Experience />
+        </SectionTransition>
+        
+        <SectionTransition sectionIndex={3} transitionType="zoom">
+          <Projects />
+        </SectionTransition>
+        
+        <SectionTransition sectionIndex={4} transitionType="slide">
+          <Skills />
+        </SectionTransition>
+        
+        <SectionTransition sectionIndex={5} transitionType="flip">
+          <Contact />
+        </SectionTransition>
       </main>
 
       <footer className="bg-slate-800/50 border-t border-gray-700 py-8 px-4 sm:px-6 lg:px-8">
