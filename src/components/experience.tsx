@@ -141,7 +141,7 @@ interface ExperienceCardProps {
 
 function ExperienceCard({ item }: ExperienceCardProps) {
   return (
-    <Card className="group h-full card-hover-effect hover-magnetic">
+    <Card className="group h-full">
       <CardHeader className="pb-4">
         <div className="flex items-start justify-between gap-4">
           <div className="flex-1 min-w-0">
