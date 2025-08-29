@@ -25,8 +25,8 @@ export function Hero() {
       <div className="max-w-7xl mx-auto">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
           {/* Avatar Column */}
-          <div className="flex justify-center lg:justify-start order-1 lg:order-1 opacity-0 animate-fade-in-left">
-            <Avatar className="w-80 h-80 ring-4 ring-blue-500 ring-offset-4 ring-offset-slate-900 hover:scale-105 transition-transform duration-300 animate-float animate-pulse-glow">
+          <div className="flex justify-center lg:justify-start order-1 lg:order-1 opacity-0 animate-hero-reveal">
+            <Avatar className="w-80 h-80 ring-4 ring-blue-500 ring-offset-4 ring-offset-slate-900 hover-magnetic animate-float animate-pulse-glow card-hover-effect">
               <AvatarImage 
                 src="/Tanner_Lee_Headshot.jpeg" 
                 alt="Tanner Lee professional headshot"
@@ -40,7 +40,7 @@ export function Hero() {
           <div className="text-center lg:text-left order-2 lg:order-2">
             <h1 className="text-5xl sm:text-6xl font-bold mb-4 opacity-0 animate-fade-in-right animation-delay-200">
               <span className="text-gray-100">Tanner</span>{' '}
-              <span className="text-gradient">Lee</span>
+              <span className="text-gradient text-shimmer">Lee</span>
             </h1>
             
             <h2 className="text-2xl sm:text-3xl font-semibold text-gray-400 mb-6 opacity-0 animate-fade-in-right animation-delay-400">

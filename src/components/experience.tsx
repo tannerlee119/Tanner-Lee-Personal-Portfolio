@@ -141,7 +141,7 @@ interface ExperienceCardProps {
 
 function ExperienceCard({ item }: ExperienceCardProps) {
   return (
-    <Card className="group h-full">
+    <Card className="group h-full card-hover-effect hover-magnetic">
       <CardHeader className="pb-4">
         <div className="flex items-start justify-between gap-4">
           <div className="flex-1 min-w-0">
@@ -234,7 +234,15 @@ export function Experience() {
             
             <div className="grid gap-6">
               {technicalExperience.map((item, index) => (
-                <ExperienceCard key={index} item={item} />
+                <AnimatedSection 
+                  key={index}
+                  animation="fade-up"
+                  delay={index * 150}
+                  parallax={true}
+                  intensity={0.4}
+                >
+                  <ExperienceCard item={item} />
+                </AnimatedSection>
               ))}
             </div>
           </div>
@@ -250,7 +258,15 @@ export function Experience() {
             
             <div className="grid gap-6 md:grid-cols-1 lg:grid-cols-2">
               {leadershipExperience.map((item, index) => (
-                <ExperienceCard key={index} item={item} />
+                <AnimatedSection 
+                  key={index}
+                  animation="scale"
+                  delay={index * 100}
+                  parallax={true}
+                  intensity={0.3}
+                >
+                  <ExperienceCard item={item} />
+                </AnimatedSection>
               ))}
             </div>
           </div>
@@ -266,7 +282,15 @@ export function Experience() {
             
             <div className="grid gap-6 md:grid-cols-1 lg:grid-cols-2">
               {serviceExperience.map((item, index) => (
-                <ExperienceCard key={index} item={item} />
+                <AnimatedSection 
+                  key={index}
+                  animation="fade-left"
+                  delay={index * 80}
+                  parallax={true}
+                  intensity={0.25}
+                >
+                  <ExperienceCard item={item} />
+                </AnimatedSection>
               ))}
             </div>
           </div>
