@@ -439,3 +439,32 @@
   transform-origin: center center;
   backface-visibility: hidden;
 }
+
+/* Initial states - content starts in the "from" position of animations */
+.section-slide-initial {
+  transform: translateX(100vw) scale(0.8) rotateY(45deg) !important;
+  opacity: 0 !important;
+  filter: blur(20px);
+  visibility: hidden;
+}
+
+.section-zoom-initial {
+  transform: scale(0.5) rotateX(45deg) !important;
+  opacity: 0 !important;
+  filter: blur(30px);
+  visibility: hidden;
+}
+
+.section-flip-initial {
+  transform: rotateY(90deg) scale(0.8) !important;
+  opacity: 0 !important;
+  filter: blur(15px);
+  visibility: hidden;
+}
+
+/* Override visibility when animation starts */
+.section-slide-in,
+.section-zoom-in,
+.section-flip-in {
+  visibility: visible !important;
+}

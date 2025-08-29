@@ -15,11 +15,25 @@ export function SectionTransition({
   sectionIndex,
   transitionType = 'slide' 
 }: SectionTransitionProps) {
+  // Hero section (index 0) should start visible, others start hidden immediately
   const [isVisible, setIsVisible] = useState(false)
   const [hasTriggered, setHasTriggered] = useState(false)
+  const [isMounted, setIsMounted] = useState(false)
   const sectionRef = useRef<HTMLDivElement>(null)
 
+  // Set mounted state to prevent hydration issues
   useEffect(() => {
+    setIsMounted(true)
+    if (sectionIndex === 0) {
+      setIsVisible(true)
+      setHasTriggered(true)
+    }
+  }, [sectionIndex])
+
+  useEffect(() => {
+    // Skip intersection observer for hero section
+    if (sectionIndex === 0 || !isMounted) return
+    
     const observer = new IntersectionObserver(
       ([entry]) => {
         if (entry.isIntersecting && !hasTriggered) {
@@ -29,7 +43,7 @@ export function SectionTransition({
       },
       {
         threshold: 0.2,
-        rootMargin: '-10% 0px -10% 0px'
+        rootMargin: '0px 0px -10% 0px'
       }
     )
 
@@ -38,20 +52,42 @@ export function SectionTransition({
     }
 
     return () => observer.disconnect()
-  }, [hasTriggered])
+  }, [hasTriggered, sectionIndex, isMounted])
 
   const getTransitionClass = () => {
-    if (!isVisible) return 'opacity-0'
+    if (!isMounted) return 'opacity-0' // Prevent flash during hydration
     
+    const baseClasses = 'section-entering'
+    
+    // Hero section (index 0) should always be visible without animation
+    if (sectionIndex === 0) {
+      return baseClasses
+    }
+    
+    if (!isVisible) {
+      // Before animation: set initial transform state
+      switch (transitionType) {
+        case 'slide':
+          return `${baseClasses} section-slide-initial`
+        case 'zoom':
+          return `${baseClasses} section-zoom-initial`
+        case 'flip':
+          return `${baseClasses} section-flip-initial`
+        default:
+          return `${baseClasses} section-slide-initial`
+      }
+    }
+    
+    // During/after animation: apply the animation class
     switch (transitionType) {
       case 'slide':
-        return 'section-slide-in section-entering'
+        return `${baseClasses} section-slide-in`
       case 'zoom':
-        return 'section-zoom-in section-entering'
+        return `${baseClasses} section-zoom-in`
       case 'flip':
-        return 'section-flip-in section-entering'
+        return `${baseClasses} section-flip-in`
       default:
-        return 'section-slide-in section-entering'
+        return `${baseClasses} section-slide-in`
     }
   }
 
@@ -60,7 +96,7 @@ export function SectionTransition({
       ref={sectionRef}
       className={`section-transition-container ${getTransitionClass()} ${className}`}
       style={{
-        animationDelay: `${sectionIndex * 0.2}s`
+        animationDelay: sectionIndex === 0 ? '0s' : `${sectionIndex * 0.1}s`
       }}
     >
       {children}

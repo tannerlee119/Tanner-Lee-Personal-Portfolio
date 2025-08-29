@@ -22,7 +22,7 @@ export function AnimatedSection({
 }: AnimatedSectionProps) {
   const { isInView, scrollProgress, elementRef } = useAdvancedScrollAnimation({
     threshold: 0.1,
-    triggerOnce: !parallax
+    triggerOnce: true // Always trigger only once
   })
 
   const getAnimationClass = () => {
