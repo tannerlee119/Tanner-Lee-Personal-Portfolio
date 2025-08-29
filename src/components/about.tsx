@@ -16,27 +16,27 @@ export function About() {
     <section id="about" className="py-20 px-4 sm:px-6 lg:px-8">
       <div className="max-w-4xl mx-auto">
         <div className="text-center mb-16">
-          <h2 className="text-4xl font-bold text-gray-100 mb-4">About Me</h2>
-          <div className="w-24 h-1 bg-blue-500 mx-auto"></div>
+          <h2 className="text-4xl font-bold text-gray-100 mb-4 opacity-0 animate-fade-in-up">About Me</h2>
+          <div className="w-24 h-1 bg-blue-500 mx-auto opacity-0 animate-fade-in-up animation-delay-200"></div>
         </div>
 
         <div className="space-y-12">
           {/* Personal Narrative */}
           <div className="prose prose-lg max-w-none">
             <div className="text-gray-300 leading-relaxed space-y-6">
-              <p className="text-lg">
+              <p className="text-lg opacity-0 animate-fade-in-up animation-delay-400">
                 I&apos;m a passionate software developer recently graduated with a Bachelor&apos;s degree in Computer Science 
                 from the University of Wisconsin-Madison.
               </p>
               
-              <p className="text-lg">
+              <p className="text-lg opacity-0 animate-fade-in-up animation-delay-600">
                 My journey into technology began with a curiosity about how things work and evolved into a 
                 deep love for building solutions that make a meaningful impact. Through my studies and 
                 various experiences, I&apos;ve developed strong technical skills while also learning to 
                 collaborate across cultures and adapt to new environments.
               </p>
               
-              <p className="text-lg">
+              <p className="text-lg opacity-0 animate-fade-in-up animation-delay-800">
                 What drives me most is the intersection of creativity and problem-solving that programming 
                 offers. Whether I&apos;m architecting a full-stack web application, optimizing database queries, 
                 or mentoring elementary students in coding, I approach each challenge with enthusiasm and 
@@ -48,7 +48,7 @@ export function About() {
 
           {/* Interests Section */}
           <div>
-            <h3 className="text-2xl font-semibold text-gray-100 mb-8 text-center">
+            <h3 className="text-2xl font-semibold text-gray-100 mb-8 text-center opacity-0 animate-fade-in-up animation-delay-1000">
               Beyond Coding
             </h3>
             
