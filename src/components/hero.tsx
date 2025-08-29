@@ -55,7 +55,7 @@ export function Hero() {
             <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start opacity-0 animate-slide-in-scale animation-delay-800">
               <Button 
                 onClick={handleContactClick}
-                className="bg-blue-500 hover:bg-blue-600 text-white px-8 py-3 text-lg"
+                className="bg-blue-500 hover:bg-blue-600 text-white px-8 py-3 text-lg cursor-pointer"
               >
                 <Mail className="mr-2 h-5 w-5" />
                 Contact Me
@@ -97,6 +97,7 @@ export function Hero() {
                   size="lg"
                   onClick={handleDownloadResume}
                   aria-label="Download Tanner's resume"
+                  className="cursor-pointer"
                 >
                   <Download className="h-5 w-5" />
                 </Button>
