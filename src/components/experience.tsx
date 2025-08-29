@@ -146,7 +146,7 @@ function ExperienceCard({ item }: ExperienceCardProps) {
         <div className="flex items-start justify-between gap-4">
           <div className="flex-1 min-w-0">
             <div className="flex items-center gap-3 mb-2">
-              <div className="w-12 h-12 bg-gray-700 rounded-lg flex items-center justify-center flex-shrink-0 overflow-hidden">
+              <div className="w-12 h-12 bg-white rounded-lg flex items-center justify-center flex-shrink-0 overflow-hidden">
                 <Image
                   src={item.logo}
                   alt={`${'company' in item ? item.company : item.organization} logo`}
