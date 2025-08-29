@@ -33,7 +33,13 @@ export function useParallaxScroll() {
   return { scrollY, isVisible, elementRef }
 }
 
-export function useAdvancedScrollAnimation(options = {}) {
+interface UseAdvancedScrollAnimationOptions {
+  threshold?: number
+  rootMargin?: string
+  triggerOnce?: boolean
+}
+
+export function useAdvancedScrollAnimation(options: UseAdvancedScrollAnimationOptions = {}) {
   const {
     threshold = 0.1,
     rootMargin = '0px',
