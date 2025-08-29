@@ -226,9 +226,6 @@ export function Experience() {
           {/* Technical Experience */}
           <div>
             <h3 className="text-2xl font-semibold text-gray-100 mb-8 flex items-center gap-3">
-              <span className="w-8 h-8 bg-blue-500 rounded-lg flex items-center justify-center">
-                <span className="text-white text-sm">💻</span>
-              </span>
               Technical Experience
             </h3>
             
@@ -250,9 +247,6 @@ export function Experience() {
           {/* Leadership & Community Involvement */}
           <div>
             <h3 className="text-2xl font-semibold text-gray-100 mb-8 flex items-center gap-3">
-              <span className="w-8 h-8 bg-blue-500 rounded-lg flex items-center justify-center">
-                <span className="text-white text-sm">🌟</span>
-              </span>
               Leadership & Community Involvement
             </h3>
             
@@ -274,9 +268,6 @@ export function Experience() {
           {/* Customer Service & Hospitality */}
           <div>
             <h3 className="text-2xl font-semibold text-gray-100 mb-8 flex items-center gap-3">
-              <span className="w-8 h-8 bg-blue-500 rounded-lg flex items-center justify-center">
-                <span className="text-white text-sm">🍽️</span>
-              </span>
               Customer Service & Hospitality
             </h3>
             
