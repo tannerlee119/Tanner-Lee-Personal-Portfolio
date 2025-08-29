@@ -99,7 +99,8 @@ export function Hero() {
                   aria-label="Download Tanner's resume"
                   className="cursor-pointer"
                 >
-                  <Download className="h-5 w-5" />
+                  <Download className="mr-2 h-5 w-5" />
+                  Resume
                 </Button>
               </div>
             </div>
