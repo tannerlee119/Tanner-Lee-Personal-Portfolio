@@ -1,5 +1,5 @@
 import { Button } from '@/components/ui/button'
-import { Avatar, AvatarImage, AvatarFallback } from '@/components/ui/avatar'
+import { Avatar, AvatarImage } from '@/components/ui/avatar'
 import { Github, Linkedin, Mail, Download } from 'lucide-react'
 
 export function Hero() {

@@ -5,7 +5,7 @@ import { useEffect, useRef, useState } from 'react'
 export function useParallaxScroll() {
   const [scrollY, setScrollY] = useState(0)
   const [isVisible, setIsVisible] = useState(false)
-  const elementRef = useRef<HTMLElement>(null)
+  const elementRef = useRef<HTMLDivElement>(null)
 
   useEffect(() => {
     const handleScroll = () => {
@@ -42,7 +42,7 @@ export function useAdvancedScrollAnimation(options = {}) {
 
   const [isInView, setIsInView] = useState(false)
   const [scrollProgress, setScrollProgress] = useState(0)
-  const elementRef = useRef<HTMLElement>(null)
+  const elementRef = useRef<HTMLDivElement>(null)
 
   useEffect(() => {
     const element = elementRef.current

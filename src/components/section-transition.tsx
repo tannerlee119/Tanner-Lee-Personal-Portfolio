@@ -36,7 +36,6 @@ export function SectionTransition({
     
     const observer = new IntersectionObserver(
       ([entry]) => {
-        console.log(`Section ${sectionIndex} intersecting:`, entry.isIntersecting, 'hasTriggered:', hasTriggered)
         if (entry.isIntersecting && !hasTriggered) {
           setIsVisible(true)
           setHasTriggered(true)
