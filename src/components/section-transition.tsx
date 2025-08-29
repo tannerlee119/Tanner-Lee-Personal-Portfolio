@@ -36,14 +36,15 @@ export function SectionTransition({
     
     const observer = new IntersectionObserver(
       ([entry]) => {
+        console.log(`Section ${sectionIndex} intersecting:`, entry.isIntersecting, 'hasTriggered:', hasTriggered)
         if (entry.isIntersecting && !hasTriggered) {
           setIsVisible(true)
           setHasTriggered(true)
         }
       },
       {
-        threshold: 0.2,
-        rootMargin: '0px 0px -10% 0px'
+        threshold: 0.1,
+        rootMargin: '50px 0px -50px 0px'
       }
     )
 
@@ -98,6 +99,9 @@ export function SectionTransition({
       style={{
         animationDelay: sectionIndex === 0 ? '0s' : `${sectionIndex * 0.1}s`
       }}
+      data-section={sectionIndex}
+      data-visible={isVisible}
+      data-triggered={hasTriggered}
     >
       {children}
     </div>
