@@ -31,9 +31,10 @@ export function Hero() {
                 src="/Tanner_Lee_Headshot.jpeg" 
                 alt="Tanner Lee professional headshot"
                 className="object-cover"
+                loading="eager"
               />
               <AvatarFallback className="text-6xl font-bold bg-blue-500 text-white">
-                TL
+
               </AvatarFallback>
             </Avatar>
           </div>
