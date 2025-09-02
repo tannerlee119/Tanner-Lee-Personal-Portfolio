@@ -445,21 +445,21 @@
   transform: translateX(60px) scale(0.9) rotateY(15deg) !important;
   opacity: 0 !important;
   filter: blur(10px);
-  visibility: hidden;
+  visibility: hidden !important;
 }
 
 .section-zoom-initial {
   transform: scale(0.5) rotateX(45deg) !important;
   opacity: 0 !important;
   filter: blur(30px);
-  visibility: hidden;
+  visibility: hidden !important;
 }
 
 .section-flip-initial {
   transform: rotateY(90deg) scale(0.8) !important;
   opacity: 0 !important;
   filter: blur(15px);
-  visibility: hidden;
+  visibility: hidden !important;
 }
 
 /* Override visibility when animation starts */
