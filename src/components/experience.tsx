@@ -1,7 +1,7 @@
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card'
 import { Badge } from '@/components/ui/badge'
 import { Calendar, MapPin } from 'lucide-react'
-import { AnimatedSection } from '@/components/animated-section'
+import { SmoothSection } from '@/components/smooth-section'
 import Image from 'next/image'
 
 const technicalExperience = [
@@ -217,10 +217,10 @@ export function Experience() {
   return (
     <section id="experience" className="py-20 px-4 sm:px-6 lg:px-8 bg-slate-800/20">
       <div className="max-w-6xl mx-auto">
-        <AnimatedSection className="text-center mb-16">
+        <SmoothSection className="text-center mb-16">
           <h2 className="text-4xl font-bold text-gray-100 mb-4">Experience</h2>
           <div className="w-24 h-1 bg-blue-500 mx-auto"></div>
-        </AnimatedSection>
+        </SmoothSection>
 
         <div className="space-y-16">
           {/* Technical Experience */}
@@ -231,15 +231,13 @@ export function Experience() {
             
             <div className="grid gap-6">
               {technicalExperience.map((item, index) => (
-                <AnimatedSection 
+                <SmoothSection 
                   key={index}
-                  animation="fade-up"
-                  delay={index * 150}
-                  parallax={true}
-                  intensity={0.4}
+                  animation="slide"
+                  delay={index * 100}
                 >
                   <ExperienceCard item={item} />
-                </AnimatedSection>
+                </SmoothSection>
               ))}
             </div>
           </div>
@@ -252,15 +250,13 @@ export function Experience() {
             
             <div className="grid gap-6 md:grid-cols-1 lg:grid-cols-2">
               {leadershipExperience.map((item, index) => (
-                <AnimatedSection 
+                <SmoothSection 
                   key={index}
                   animation="scale"
-                  delay={index * 100}
-                  parallax={true}
-                  intensity={0.3}
+                  delay={index * 150}
                 >
                   <ExperienceCard item={item} />
-                </AnimatedSection>
+                </SmoothSection>
               ))}
             </div>
           </div>
@@ -273,15 +269,13 @@ export function Experience() {
             
             <div className="grid gap-6 md:grid-cols-1 lg:grid-cols-2">
               {serviceExperience.map((item, index) => (
-                <AnimatedSection 
+                <SmoothSection 
                   key={index}
-                  animation="fade-left"
-                  delay={index * 80}
-                  parallax={true}
-                  intensity={0.25}
+                  animation="fade"
+                  delay={index * 200}
                 >
                   <ExperienceCard item={item} />
-                </AnimatedSection>
+                </SmoothSection>
               ))}
             </div>
           </div>
