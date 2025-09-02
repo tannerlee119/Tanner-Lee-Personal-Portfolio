@@ -166,11 +166,11 @@ export function Skills() {
             <h4 className="text-sm font-medium text-gray-300 mb-3 text-center">Skill Level Guide</h4>
             <div className="flex flex-wrap justify-center gap-3 text-xs">
               <div className="flex items-center gap-2">
-                <Badge className="bg-blue-500 text-white px-2 py-1">Advanced</Badge>
+                <Badge className="bg-green-500 text-white px-2 py-1">Advanced</Badge>
                 <span className="text-gray-400">3+ years experience</span>
               </div>
               <div className="flex items-center gap-2">
-                <Badge className="bg-green-500 text-white px-2 py-1">Proficient</Badge>
+                <Badge className="bg-blue-500 text-white px-2 py-1">Proficient</Badge>
                 <span className="text-gray-400">1-3 years experience</span>
               </div>
               <div className="flex items-center gap-2">

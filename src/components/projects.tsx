@@ -20,7 +20,7 @@ const projects = [
     longDescription: 'Engineered with React Native and Firebase integration for secure authentication. Enables users to create, update, and access events with real-time data synchronization, providing a seamless group coordination experience.',
     image: '/projects/the-move.png',
     technologies: ['React Native', 'Firebase', 'Real-time Sync', 'Authentication', 'Mobile Development'],
-    githubUrl: 'https://github.com/tannerlee/the-move',
+    githubUrl: 'https://github.com/tannerlee119/The_Move',
     liveUrl: null,
     featured: true
   },
@@ -30,7 +30,7 @@ const projects = [
     longDescription: 'Developed with React, JavaScript, HTML, and CSS. Features asynchronous functions to animate sorting processes, helping users understand algorithmic steps, time complexity, and performance characteristics of various sorting methods.',
     image: '/projects/sorting-visualizer.png',
     technologies: ['React', 'JavaScript', 'HTML5', 'CSS3', 'Algorithm Visualization', 'Animation'],
-    githubUrl: 'https://github.com/tannerlee/sorting-visualizer',
+    githubUrl: 'https://github.com/tannerlee119/sorting-visualizer',
     liveUrl: 'https://sorting-visualizer-tan.vercel.app',
     featured: false
   }
