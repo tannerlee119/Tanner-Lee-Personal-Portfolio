@@ -68,8 +68,10 @@ const leadershipExperience = [
   }
 ]
 
+type ExperienceItem = (typeof technicalExperience)[0] | (typeof leadershipExperience)[0];
+
 interface ExperienceCardProps {
-  item: typeof technicalExperience[0]
+  item: ExperienceItem
 }
 
 function ExperienceCard({ item }: ExperienceCardProps) {
@@ -81,7 +83,7 @@ function ExperienceCard({ item }: ExperienceCardProps) {
             <div className="flex items-center gap-3 mb-2">
               <div className="w-12 h-12 bg-gray-700 rounded-lg flex items-center justify-center flex-shrink-0">
                 <span className="text-blue-500 font-bold text-lg">
-                  {item.company ? item.company[0] : item.organization[0]}
+                  {'company' in item ? item.company[0] : item.organization[0]}
                 </span>
               </div>
               <div className="min-w-0">
