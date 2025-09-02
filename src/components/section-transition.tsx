@@ -55,8 +55,6 @@ export function SectionTransition({
   }, [hasTriggered, sectionIndex, isMounted])
 
   const getTransitionClass = () => {
-    if (!isMounted) return 'opacity-0' // Prevent flash during hydration
-    
     const baseClasses = 'section-entering'
     
     // Hero section (index 0) should always be visible without animation
@@ -65,7 +63,8 @@ export function SectionTransition({
     }
     
     if (!isVisible) {
-      // Before animation: set initial transform state
+      // Before animation: set initial transform state.
+      // This is now applied on the initial server render, preventing any flash of content.
       switch (transitionType) {
         case 'slide':
           return `${baseClasses} section-slide-initial`
