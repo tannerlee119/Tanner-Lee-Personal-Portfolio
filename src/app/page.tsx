@@ -8,7 +8,7 @@ import { Projects } from '@/components/projects'
 import { Skills } from '@/components/skills'
 import { Contact } from '@/components/contact'
 import { ScrollToTop } from '@/components/scroll-to-top'
-import { SectionTransition } from '@/components/section-transition'
+import { SmoothSection } from '@/components/smooth-section'
 
 export default function Home() {
   return (
@@ -16,29 +16,27 @@ export default function Home() {
       <Navigation />
       
       <main>
-        <SectionTransition sectionIndex={0} transitionType="zoom">
-          <Hero />
-        </SectionTransition>
+        <Hero />
         
-        <SectionTransition sectionIndex={1} transitionType="slide">
+        <SmoothSection animation="slide" delay={0}>
           <About />
-        </SectionTransition>
+        </SmoothSection>
         
-        <SectionTransition sectionIndex={2} transitionType="flip">
+        <SmoothSection animation="fade" delay={100}>
           <Experience />
-        </SectionTransition>
+        </SmoothSection>
         
-        <SectionTransition sectionIndex={3} transitionType="zoom">
+        <SmoothSection animation="scale" delay={200}>
           <Projects />
-        </SectionTransition>
+        </SmoothSection>
         
-        <SectionTransition sectionIndex={4} transitionType="slide">
+        <SmoothSection animation="slide" delay={300}>
           <Skills />
-        </SectionTransition>
+        </SmoothSection>
         
-        <SectionTransition sectionIndex={5} transitionType="flip">
+        <SmoothSection animation="fade" delay={400}>
           <Contact />
-        </SectionTransition>
+        </SmoothSection>
       </main>
 
       <footer className="bg-slate-800/50 border-t border-gray-700 py-8 px-4 sm:px-6 lg:px-8">
