@@ -80,9 +80,9 @@ const skillCategories = [
 const getLevelColor = (level: string) => {
   switch (level) {
     case 'Advanced':
-      return 'bg-blue-500 text-white'
-    case 'Proficient':
       return 'bg-green-500 text-white'
+    case 'Proficient':
+      return 'bg-blue-500 text-white'
     case 'Intermediate':
       return 'bg-yellow-500 text-black'
     case 'Beginner':
