@@ -21,7 +21,7 @@ const projects = [
     image: '/projects/biterank.png',
     technologies: ['React', 'TypeScript', 'Node.js', 'PostgreSQL', 'Drizzle ORM', 'Google Places API', 'Maps Integration'],
     githubUrl: 'https://github.com/tannerlee119/BiteRank',
-    liveUrl: 'https://biterank.vercel.app',
+    liveUrl: null,
     featured: true
   },
   {

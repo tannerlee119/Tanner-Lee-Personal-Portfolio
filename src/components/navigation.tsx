@@ -54,7 +54,7 @@ export function Navigation() {
           <div className="flex-shrink-0">
             <button 
               onClick={() => handleNavClick('#')}
-              className="text-xl font-bold text-blue-500 hover:text-blue-400 transition-colors cursor-pointer"
+              className="text-xl font-bold text-gray-100 hover:text-blue-500 transition-colors cursor-pointer"
               aria-label="Scroll to top"
             >
               Tanner Lee

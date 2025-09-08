@@ -7,7 +7,7 @@ const interests = [
   { name: 'Bouldering', icon: Mountain, description: 'Rock climbing enthusiast' },
   { name: 'Food Blogging', icon: Coffee, description: 'Culinary exploration' },
   { name: 'Theatre', icon: Theater, description: 'Creative expression' },
-  { name: 'Running', icon: Footprints, description: 'HS Track Captain' },
+  { name: 'Running', icon: Footprints, description: 'Track & Field Captain' },
   { name: 'Tae Kwon Do', icon: Trophy, description: 'Third-Degree Black Belt and Instructor' }
 ]
 
@@ -32,16 +32,15 @@ export function About() {
               <p className="text-lg">
                 My journey into technology began with a curiosity about how things work and evolved into a 
                 deep love for building solutions that make a meaningful impact. Through my studies and 
-                various experiences, I&apos;ve developed strong technical skills while also learning to 
+                various experiences, I have developed strong technical skills while also learning to 
                 collaborate across cultures and adapt to new environments.
               </p>
               
               <p className="text-lg">
-                What drives me most is the intersection of creativity and problem-solving that programming 
-                offers. Whether I&apos;m architecting a full-stack web application, optimizing database queries, 
-                or mentoring elementary students in coding, I approach each challenge with enthusiasm and 
-                attention to detail. I believe the best solutions come from understanding both the technical 
-                requirements and the human needs behind every project.
+                I am passionate about using code to create real-world impact. I love applying technology to 
+                solve real problems, making fun applications and websites to improve people's lives. 
+                Beyond my professional interests, I enjoy playing the piano, running, bouldering, 
+                and attending theater performances. These outlets help me fuel a balanced, creative mindset.
               </p>
             </div>
           </div>
