@@ -5,6 +5,16 @@ import { Github, ExternalLink, Play } from 'lucide-react'
 
 const projects = [
   {
+    title: 'Gabooja Creator Discovery',
+    description: 'A Next.js application for discovering and analyzing social media creators across Instagram and TikTok with AI-powered insights.',
+    longDescription: 'Built with Next.js 15, TypeScript, and Supabase for comprehensive creator analysis. Features AI-powered insights using OpenAI GPT, web scraping with Playwright, advanced filtering system, and real-time analytics for multi-platform creator discovery.',
+    image: '/projects/gabooja.png',
+    technologies: ['Next.js 15', 'TypeScript', 'Supabase', 'Tailwind CSS', 'Playwright', 'OpenAI GPT', 'Radix UI'],
+    githubUrl: 'https://github.com/tannerlee119/gaboojacreatordiscovery',
+    liveUrl: 'https://gaboojacreatordiscovery.vercel.app',
+    featured: true
+  },
+  {
     title: 'BiteRank',
     description: 'A full-stack restaurant review web app that enables users to track, rate, and discover restaurants with interactive map features.',
     longDescription: 'Built with React, TypeScript, Node.js, and PostgreSQL using Drizzle ORM. Features Google Places API integration for restaurant discovery, interactive map visualization with custom markers, geocoding, and a comprehensive bookmarking system with external data synchronization.',
