@@ -17,7 +17,7 @@ npm run build        # Build for production
 npm run start        # Start production server
 
 # Code Quality
-npm run lint         # Run ESLint to check code quality
+npm run lint         # Run ESLint to check code quality (configured with Next.js rules)
 ```
 
 ## Architecture & Tech Stack
@@ -40,14 +40,14 @@ src/
 ├── components/         # React components
 │   ├── ui/            # shadcn/ui base components (Avatar, Badge, Button, Card)
 │   ├── hero.tsx       # Landing section
-│   ├── about.tsx      # About section
 │   ├── experience.tsx # Work experience cards
 │   ├── projects.tsx   # Project showcase
 │   ├── skills.tsx     # Skills display
 │   ├── contact.tsx    # Contact information
-│   ├── navigation.tsx # Sticky header nav
-│   └── smooth-section.tsx # Optimized scroll animations
-├── hooks/             # Custom React hooks
+│   ├── navigation.tsx # Sticky header nav (note: there's also navigation 2.tsx)
+│   ├── smooth-section.tsx # Optimized scroll animations
+│   └── animated-section.tsx # Alternative animation component
+├── hooks/             # Custom React hooks (if present)
 │   ├── useScrollAnimation.tsx    # Basic scroll trigger
 │   ├── useParallaxScroll.tsx    # Parallax effects
 │   └── useSectionTransitions.tsx # Section management

@@ -31,7 +31,7 @@ const projects = [
     image: '/projects/sorting-visualizer.png',
     technologies: ['React', 'JavaScript', 'HTML5', 'CSS3', 'Algorithm Visualization', 'Animation'],
     githubUrl: 'https://github.com/tannerlee119/sorting-visualizer',
-    liveUrl: 'https://sorting-visualizer-tan.vercel.app',
+    liveUrl: 'https://sorting-visualizer-seven-kappa.vercel.app/',
     featured: false
   }
 ]
