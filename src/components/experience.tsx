@@ -14,7 +14,7 @@ const technicalExperience = [
     description: 'Full-stack development for creator discovery platform',
     achievements: [
       'Engineered full-stack web applications with Node.js architecture and real-time updates',
-      'Built scalable user interfaces including Gabooja\'s Creator Discovery platform',
+      'Built scalable user interfaces including Gabooja&apos;s Creator Discovery platform',
       'Implemented AI data-enrichment features with OpenAI API, TypeScript, and PostgreSQL (Supabase)',
       'Architected and optimized PostgreSQL databases with complex querying systems for data analytics'
     ],
@@ -49,7 +49,7 @@ const leadershipExperience = [
     description: 'Computer science education for elementary students',
     achievements: [
       'Developed and executed a 12-week, project-based curriculum for 25 elementary students',
-      'Introduced foundational computer science principles using MIT\'s Scratch platform',
+      'Introduced foundational computer science principles using MIT&apos;s Scratch platform',
       'Guided 100% of students through full development process to create interactive games',
       'Drove 30% increase in club enrollment through strategic outreach and showcases'
     ],
@@ -86,7 +86,7 @@ const leadershipExperience = [
     technologies: ['Team Collaboration', 'Inventory Management', 'Community Service', 'Food Safety Standards']
   },
   {
-    organization: 'Hwang\'s Tae Kwon Do',
+    organization: 'Hwang&apos;s Tae Kwon Do',
     position: 'Instructor',
     location: 'Redmond, WA',
     period: 'May 2014 - August 2022',

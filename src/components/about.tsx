@@ -38,7 +38,7 @@ export function About() {
               
               <p className="text-lg">
                 I am passionate about using code to create real-world impact. I love applying technology to 
-                solve real problems, making fun applications and websites to improve people's lives. 
+                solve real problems, making fun applications and websites to improve people&apos;s lives. 
                 Beyond my professional interests, I enjoy playing the piano, running, bouldering, 
                 and attending theater performances. These outlets help me fuel a balanced, creative mindset.
               </p>

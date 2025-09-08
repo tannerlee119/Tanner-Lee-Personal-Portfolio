@@ -37,7 +37,7 @@ const socialLinks = [
     icon: Linkedin,
     label: 'LinkedIn',
     href: 'https://linkedin.com/in/tannerlee119',
-    description: 'Let\'s connect professionally'
+    description: 'Let&apos;s connect professionally'
   }
 ]
 
