@@ -22,7 +22,6 @@ const contactMethods = [
     label: 'Location',
     value: 'Redmond, Washington',
     href: null,
-    // description: 'Currently studying abroad'
   }
 ]
 
@@ -30,14 +29,14 @@ const socialLinks = [
   {
     icon: Github,
     label: 'GitHub',
-    href: 'https://github.com/tannerlee110',
+    href: 'https://github.com/tannerlee119',
     description: 'Check out my code'
   },
   {
     icon: Linkedin,
     label: 'LinkedIn',
     href: 'https://linkedin.com/in/tannerlee119',
-    description: 'Let&apos;s connect professionally'
+    description: 'Let\'s connect professionally'
   }
 ]
 
@@ -66,7 +65,7 @@ export function Contact() {
                 Let&apos;s Connect
               </h3>
               <p className="text-gray-300 leading-relaxed mb-8">
-                Whether you&apos;re a recruiter looking for talent, a fellow developer interested in collaboration, 
+                Whether you are a recruiter looking for talent, a fellow developer interested in collaboration, 
                 or someone who wants to discuss technology, I would love to hear from you.
               </p>
             </div>
