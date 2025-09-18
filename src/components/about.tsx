@@ -25,7 +25,7 @@ export function About() {
           <div className="prose prose-lg max-w-none">
             <div className="text-gray-300 leading-relaxed space-y-6">
               <p className="text-lg">
-                I&apos;m a passionate software developer recently graduated with a Bachelor&apos;s degree in Computer Science 
+                I am a passionate software developer recently graduated with a Bachelor's degree in Computer Science 
                 from the University of Wisconsin-Madison.
               </p>
               
@@ -38,7 +38,7 @@ export function About() {
               
               <p className="text-lg">
                 I am passionate about using code to create real-world impact. I love applying technology to 
-                solve real problems, making fun applications and websites to improve people&apos;s lives. 
+                solve real problems, making fun applications and websites to improve people's lives. 
                 Beyond my professional interests, I enjoy playing the piano, running, bouldering, 
                 and attending theater performances. These outlets help me fuel a balanced, creative mindset.
               </p>
