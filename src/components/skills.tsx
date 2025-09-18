@@ -24,7 +24,7 @@ const skillCategories = [
       { name: 'React', level: 'Advanced' },
       { name: 'Next.js', level: 'Proficient' },
       { name: 'Node.js', level: 'Proficient' },
-      { name: 'React Native', level: 'Proficient' },
+      { name: 'React Native', level: 'Intermediate' },
       { name: 'Tailwind CSS', level: 'Advanced' }
     ]
   },
@@ -34,10 +34,10 @@ const skillCategories = [
     description: 'Data management and server technologies',
     skills: [
       { name: 'PostgreSQL', level: 'Proficient' },
-      { name: 'Firebase', level: 'Proficient' },
-      { name: 'Supabase', level: 'Proficient' },
-      { name: 'Drizzle ORM', level: 'Proficient' },
-      { name: 'SQL', level: 'Advanced' }
+      { name: 'Firebase', level: 'Intermediate' },
+      { name: 'Supabase', level: 'Advanced' },
+      { name: 'Drizzle ORM', level: 'Intermediate' },
+      { name: 'SQL', level: 'Proficient' }
     ]
   },
   {
@@ -48,8 +48,8 @@ const skillCategories = [
       { name: 'Git', level: 'Advanced' },
       { name: 'VS Code', level: 'Advanced' },
       { name: 'Cursor', level: 'Proficient' },
-      { name: 'n8n', level: 'Proficient' },
-      { name: 'Puppeteer', level: 'Proficient' }
+      { name: 'n8n', level: 'Intermediate' },
+      // { name: 'Puppeteer', level: 'Proficient' }
     ]
   },
   {
@@ -57,9 +57,9 @@ const skillCategories = [
     icon: Smartphone,
     description: 'Third-party services and integrations',
     skills: [
-      { name: 'OpenAI API', level: 'Proficient' },
-      { name: 'Google Places API', level: 'Proficient' },
-      { name: 'RESTful APIs', level: 'Advanced' },
+      { name: 'OpenAI API', level: 'Advanced' },
+      { name: 'Google Places API', level: 'Intermediate' },
+      { name: 'RESTful APIs', level: 'Intermediate' },
       { name: 'Real-time Data Sync', level: 'Proficient' }
     ]
   },

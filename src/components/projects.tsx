@@ -199,13 +199,13 @@ export function Projects() {
             className="px-8 py-3"
           >
             <a
-              href="https://github.com/tannerlee"
+              href="https://github.com/tannerlee119"
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center gap-2"
             >
               <Github className="h-5 w-5" />
-              View More Projects on GitHub
+              View GitHub Profile
             </a>
           </Button>
         </div>
