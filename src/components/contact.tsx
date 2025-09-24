@@ -53,7 +53,7 @@ export function Contact() {
           <div className="w-24 h-1 bg-blue-500 mx-auto mb-6"></div>
           <p className="text-gray-400 max-w-2xl mx-auto text-lg">
             I am always open to discussing new opportunities, collaborating on interesting projects, 
-            or just having a conversation about technology and innovation.
+            or just having a chat.
           </p>
         </div>
 
@@ -66,7 +66,7 @@ export function Contact() {
               </h3>
               <p className="text-gray-300 leading-relaxed mb-8">
                 Whether you are a recruiter looking for talent, a fellow developer interested in collaboration, 
-                or someone who wants to discuss technology, I would love to hear from you.
+                or want to discuss anything, I would love to hear from you.
               </p>
             </div>
 
