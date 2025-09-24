@@ -149,7 +149,7 @@ export function Contact() {
 
                 <Button
                   onClick={handleEmailClick}
-                  className="w-full bg-blue-500 hover:bg-blue-600 text-white py-3"
+                  className="w-full bg-blue-500 hover:bg-blue-600 text-white py-3 cursor-pointer"
                   size="lg"
                 >
                   <Send className="mr-2 h-5 w-5" />
