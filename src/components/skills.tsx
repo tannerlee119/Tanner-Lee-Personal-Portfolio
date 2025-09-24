@@ -80,15 +80,15 @@ const skillCategories = [
 const getLevelColor = (level: string) => {
   switch (level) {
     case 'Advanced':
-      return 'bg-green-500 text-white'
+      return 'bg-green-500 text-white hover:bg-green-500 hover:text-white'
     case 'Proficient':
-      return 'bg-blue-500 text-white'
+      return 'bg-blue-500 text-white hover:bg-blue-500 hover:text-white'
     case 'Intermediate':
-      return 'bg-yellow-500 text-black'
+      return 'bg-yellow-500 text-black hover:bg-yellow-500 hover:text-black'
     case 'Beginner':
-      return 'bg-gray-500 text-white'
+      return 'bg-gray-500 text-white hover:bg-gray-500 hover:text-white'
     default:
-      return 'bg-gray-500 text-white'
+      return 'bg-gray-500 text-white hover:bg-gray-500 hover:text-white'
   }
 }
 
@@ -120,7 +120,7 @@ function SkillCategory({ category }: SkillCategoryProps) {
               <span className="text-gray-300 text-sm font-medium flex-1">
                 {skill.name}
               </span>
-              <Badge 
+              <Badge
                 className={`${getLevelColor(skill.level)} text-xs px-2 py-1 flex-shrink-0`}
               >
                 {skill.level}
@@ -166,19 +166,19 @@ export function Skills() {
             <h4 className="text-sm font-medium text-gray-300 mb-3 text-center">Skill Level Guide</h4>
             <div className="flex flex-wrap justify-center gap-3 text-xs">
               <div className="flex items-center gap-2">
-                <Badge className="bg-gray-500 text-white px-2 py-1">Beginner</Badge>
+                <Badge className="bg-gray-500 text-white px-2 py-1 hover:bg-gray-500 hover:text-white">Beginner</Badge>
                 <span className="text-gray-400">3 to 6 months experience</span>
               </div>
               <div className="flex items-center gap-2">
-                <Badge className="bg-yellow-500 text-black px-2 py-1">Intermediate</Badge>
+                <Badge className="bg-yellow-500 text-black px-2 py-1 hover:bg-yellow-500 hover:text-black">Intermediate</Badge>
                 <span className="text-gray-400">6 months to 1 year</span>
               </div>
               <div className="flex items-center gap-2">
-                <Badge className="bg-blue-500 text-white px-2 py-1">Proficient</Badge>
+                <Badge className="bg-blue-500 text-white px-2 py-1 hover:bg-blue-500 hover:text-white">Proficient</Badge>
                 <span className="text-gray-400">1 to 2 years experience</span>
               </div>
               <div className="flex items-center gap-2">
-                <Badge className="bg-green-500 text-white px-2 py-1">Advanced</Badge>
+                <Badge className="bg-green-500 text-white px-2 py-1 hover:bg-green-500 hover:text-white">Advanced</Badge>
                 <span className="text-gray-400">2+ years experience</span>
               </div>
             </div>
