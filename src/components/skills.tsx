@@ -25,7 +25,7 @@ const skillCategories = [
       { name: 'Next.js', level: 'Proficient' },
       { name: 'Node.js', level: 'Proficient' },
       { name: 'React Native', level: 'Intermediate' },
-      { name: 'Tailwind CSS', level: 'Advanced' }
+      { name: 'Tailwind CSS', level: 'Proficient' }
     ]
   },
   {
@@ -48,7 +48,7 @@ const skillCategories = [
       { name: 'Git', level: 'Advanced' },
       { name: 'VS Code', level: 'Advanced' },
       { name: 'Cursor', level: 'Proficient' },
-      { name: 'n8n', level: 'Intermediate' },
+      { name: 'n8n', level: 'Beginner' },
       // { name: 'Puppeteer', level: 'Proficient' }
     ]
   },
@@ -166,16 +166,20 @@ export function Skills() {
             <h4 className="text-sm font-medium text-gray-300 mb-3 text-center">Skill Level Guide</h4>
             <div className="flex flex-wrap justify-center gap-3 text-xs">
               <div className="flex items-center gap-2">
-                <Badge className="bg-green-500 text-white px-2 py-1">Advanced</Badge>
-                <span className="text-gray-400">3+ years experience</span>
-              </div>
-              <div className="flex items-center gap-2">
-                <Badge className="bg-blue-500 text-white px-2 py-1">Proficient</Badge>
-                <span className="text-gray-400">1-3 years experience</span>
+                <Badge className="bg-gray-500 text-white px-2 py-1">Beginner</Badge>
+                <span className="text-gray-400">3 to 6 months experience</span>
               </div>
               <div className="flex items-center gap-2">
                 <Badge className="bg-yellow-500 text-black px-2 py-1">Intermediate</Badge>
-                <span className="text-gray-400">6 months-1 year</span>
+                <span className="text-gray-400">6 months to 1 year</span>
+              </div>
+              <div className="flex items-center gap-2">
+                <Badge className="bg-blue-500 text-white px-2 py-1">Proficient</Badge>
+                <span className="text-gray-400">1 to 2 years experience</span>
+              </div>
+              <div className="flex items-center gap-2">
+                <Badge className="bg-green-500 text-white px-2 py-1">Advanced</Badge>
+                <span className="text-gray-400">2+ years experience</span>
               </div>
             </div>
           </div>
