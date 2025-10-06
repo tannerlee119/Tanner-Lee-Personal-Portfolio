@@ -5,6 +5,16 @@ import { Github, ExternalLink, Play } from 'lucide-react'
 
 const projects = [
   {
+    title: 'Ranked Log',
+    description: 'A full-stack web application for tracking and analyzing League of Legends performance with comprehensive statistics and filtering.',
+    longDescription: 'Built with Next.js 15, TypeScript, and SQLite for League of Legends performance tracking. Features game logging with champion picks and performance stats (K/D/A, Kill Participation, CS per minute), advanced filtering by role, game type, and champions, calculated average metrics, and complete game history visualization.',
+    image: '/projects/ranked-log.png',
+    technologies: ['Next.js 15', 'TypeScript', 'SQLite', 'Tailwind CSS', 'Better-SQLite3', 'Performance Analytics'],
+    githubUrl: 'https://github.com/tannerlee119/Ranked-Log',
+    liveUrl: 'https://ranked-log.vercel.app/stats',
+    featured: true
+  },
+  {
     title: 'Gabooja Creator Discovery',
     description: 'A Next.js application for discovering and analyzing social media creators across Instagram and TikTok with AI-powered insights.',
     longDescription: 'Built with Next.js 15, TypeScript, and Supabase for comprehensive creator analysis. Features AI-powered insights using OpenAI GPT, web scraping with Playwright, advanced filtering system, and real-time analytics for multi-platform creator discovery.',
@@ -26,7 +36,7 @@ const projects = [
   },
   {
     title: 'The Move',
-    description: 'A React Native mobile application designed to help groups create, track, and manage group activities with ease.',
+    description: 'A class team project built in React Native designed to help groups create, track, and manage group activities with ease.',
     longDescription: 'Engineered with React Native and Firebase integration for secure authentication. Enables users to create, update, and access events with real-time data synchronization, providing a seamless group coordination experience.',
     image: '/projects/the-move.png',
     technologies: ['React Native', 'Firebase', 'Real-time Sync', 'Authentication', 'Mobile Development'],
