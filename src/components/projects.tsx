@@ -36,7 +36,7 @@ const projects = [
   },
   {
     title: 'The Move',
-    description: 'A class team project built in React Native designed to help groups create, track, and manage group activities with ease.',
+    description: 'An in-class team project built in React Native designed to help groups create, track, and manage group activities with ease.',
     longDescription: 'Engineered with React Native and Firebase integration for secure authentication. Enables users to create, update, and access events with real-time data synchronization, providing a seamless group coordination experience.',
     image: '/projects/the-move.png',
     technologies: ['React Native', 'Firebase', 'Real-time Sync', 'Authentication', 'Mobile Development'],
