@@ -5,6 +5,16 @@ import { Github, ExternalLink, Play } from 'lucide-react'
 
 const projects = [
   {
+    title: 'Eat with Lee',
+    description: 'A modern food blogging website for restaurant reviews, ratings, and location-based culinary discovery.',
+    longDescription: 'Built with Next.js 15, TypeScript, and Tailwind CSS featuring a clean, news-inspired design. Includes detailed restaurant reviews with ratings and photos, interactive Google Maps integration, tagging system for cuisines, admin dashboard for review management, and social media integration for discovering the finest culinary experiences.',
+    image: '/projects/eatwithlee.png',
+    technologies: ['Next.js 15', 'TypeScript', 'Tailwind CSS', 'Google Maps API', 'Lucide React', 'Content Management'],
+    githubUrl: 'https://github.com/tannerlee119/eatwithlee',
+    liveUrl: 'https://eatwithlee.com',
+    featured: true
+  },
+  {
     title: 'Ranked Log',
     description: 'A full-stack web application for tracking and analyzing League of Legends performance with comprehensive statistics and filtering.',
     longDescription: 'Built with Next.js 15, TypeScript, and SQLite for League of Legends performance tracking. Features game logging with champion picks and performance stats (K/D/A, Kill Participation, CS per minute), advanced filtering by role, game type, and champions, calculated average metrics, and complete game history visualization.',
