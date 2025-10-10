@@ -8,6 +8,7 @@ const projects = [
     title: 'Eat with Lee',
     description: 'A modern food blogging website for restaurant reviews, ratings, and location-based culinary discovery.',
     longDescription: 'Built with Next.js 15, TypeScript, and Tailwind CSS featuring a clean, news-inspired design. Includes detailed restaurant reviews with ratings and photos, interactive location-based restaurant discovery, tagging system for cuisines, admin dashboard for review management, and social media integration for discovering the finest culinary experiences.',
+    whatILearned: 'Gained hands-on experience building a content management system from scratch, learning to balance clean UI/UX design principles with functional admin workflows, while deepening expertise in Next.js 15 App Router architecture and TypeScript type safety for scalable web applications.',
     image: '/projects/eatwithlee.png',
     technologies: ['Next.js 15', 'TypeScript', 'Tailwind CSS', 'Lucide React', 'Content Management'],
     githubUrl: 'https://github.com/tannerlee119/eatwithlee',
@@ -18,6 +19,7 @@ const projects = [
     title: 'Ranked Log',
     description: 'A full-stack web application for tracking and analyzing League of Legends performance with comprehensive statistics and filtering.',
     longDescription: 'Built with Next.js 15, TypeScript, and SQLite for League of Legends performance tracking. Features game logging with champion picks and performance stats (K/D/A, Kill Participation, CS per minute), advanced filtering by role, game type, and champions, calculated average metrics, and complete game history visualization.',
+    whatILearned: 'Developed expertise in database design and SQL optimization with SQLite, learning to implement complex filtering logic and aggregate calculations for performance analytics, while mastering server-side rendering patterns in Next.js for efficient data management.',
     image: '/projects/ranked-log.png',
     technologies: ['Next.js 15', 'TypeScript', 'SQLite', 'Tailwind CSS', 'Better-SQLite3', 'Performance Analytics'],
     githubUrl: 'https://github.com/tannerlee119/Ranked-Log',
@@ -28,6 +30,7 @@ const projects = [
     title: 'Gabooja Creator Discovery',
     description: 'A Next.js application for discovering and analyzing social media creators across Instagram and TikTok with AI-powered insights.',
     longDescription: 'Built with Next.js 15, TypeScript, and Supabase for comprehensive creator analysis. Features AI-powered insights using OpenAI GPT, web scraping with Playwright, advanced filtering system, and real-time analytics for multi-platform creator discovery.',
+    whatILearned: 'Mastered integration of AI APIs and web scraping tools, learning to orchestrate complex data pipelines combining OpenAI GPT analysis with Playwright automation, while developing skills in prompt engineering and handling asynchronous data processing at scale.',
     image: '/projects/gabooja.png',
     technologies: ['Next.js 15', 'TypeScript', 'Supabase', 'Tailwind CSS', 'Playwright', 'OpenAI GPT', 'Radix UI'],
     githubUrl: 'https://github.com/tannerlee119/gaboojacreatordiscovery',
@@ -38,6 +41,7 @@ const projects = [
     title: 'BiteRank',
     description: 'A full-stack restaurant review web app that enables users to track, rate, and discover restaurants with interactive map features.',
     longDescription: 'Built with React, TypeScript, Node.js, and PostgreSQL using Drizzle ORM. Features Google Places API integration for restaurant discovery, interactive map visualization with custom markers, geocoding, and a comprehensive bookmarking system with external data synchronization.',
+    whatILearned: 'Strengthened full-stack development skills by building a complete Node.js backend with PostgreSQL and Drizzle ORM, learning database schema design, API integration patterns with Google Places, and implementing efficient data synchronization between client and server.',
     image: '/projects/biterank.png',
     technologies: ['React', 'TypeScript', 'Node.js', 'PostgreSQL', 'Drizzle ORM', 'Google Places API', 'Maps Integration'],
     githubUrl: 'https://github.com/tannerlee119/BiteRank',
@@ -48,6 +52,7 @@ const projects = [
     title: 'The Move',
     description: 'An in-class team project built in React Native designed to help groups create, track, and manage group activities with ease.',
     longDescription: 'Engineered with React Native and Firebase integration for secure authentication. Enables users to create, update, and access events with real-time data synchronization, providing a seamless group coordination experience.',
+    whatILearned: 'Gained mobile development experience with React Native and Firebase, learning cross-platform mobile architecture, real-time database synchronization, authentication flows, and collaborative development practices working within a team environment.',
     image: '/projects/the-move.png',
     technologies: ['React Native', 'Firebase', 'Real-time Sync', 'Authentication', 'Mobile Development'],
     githubUrl: 'https://github.com/tannerlee119/The_Move',
@@ -58,6 +63,7 @@ const projects = [
     title: 'Sorting Visualizer',
     description: 'An interactive web application that visualizes 15 different sorting algorithms in real-time to enhance algorithmic understanding.',
     longDescription: 'Developed with React, JavaScript, HTML, and CSS. Features asynchronous functions to animate sorting processes, helping users understand algorithmic steps, time complexity, and performance characteristics of various sorting methods.',
+    whatILearned: 'Deepened understanding of data structures and algorithms by implementing 15 sorting algorithms from scratch, learning to visualize complex computational processes with animation timing, asynchronous JavaScript patterns, and performance optimization techniques.',
     image: '/projects/sorting-visualizer.png',
     technologies: ['React', 'JavaScript', 'HTML5', 'CSS3', 'Algorithm Visualization', 'Animation'],
     githubUrl: 'https://github.com/tannerlee119/sorting-visualizer',
@@ -140,7 +146,16 @@ function ProjectCard({ project }: ProjectCardProps) {
         <p className="text-gray-300 text-sm leading-relaxed">
           {project.longDescription}
         </p>
-        
+
+        {project.whatILearned && (
+          <div className="bg-slate-800/40 rounded-lg p-4 border border-slate-700/50">
+            <h4 className="text-blue-400 font-semibold text-sm mb-2">What I Learned</h4>
+            <p className="text-gray-300 text-sm leading-relaxed">
+              {project.whatILearned}
+            </p>
+          </div>
+        )}
+
         <div className="flex flex-wrap gap-2">
           {project.technologies.map((tech, techIndex) => (
             <Badge key={techIndex} variant="outline" className="text-xs">
