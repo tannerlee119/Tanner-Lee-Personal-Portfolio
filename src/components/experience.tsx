@@ -16,9 +16,12 @@ const technicalExperience = [
       'Engineered full-stack web applications with Node.js architecture and real-time updates',
       'Built scalable user interfaces including Gabooja\'s Creator Discovery platform',
       'Implemented AI data-enrichment features with OpenAI API, TypeScript, and PostgreSQL (Supabase)',
-      'Architected and optimized PostgreSQL databases with complex querying systems for data analytics'
+      'Architected and optimized PostgreSQL databases with complex querying systems for data analytics',
+      'Conducted comprehensive UI and functional testing for Creator Studio, covering authentication, design wizard, canvas editor, and asset library components',
+      'Executed end-to-end testing for complete workflows from design creation to campaign launch, ensuring integration reliability across NestJS API, Temporal workers, and external services (Printful, Replicate AI)',
+      'Created detailed architecture documentation with C4 diagrams covering system context, containers, components, sequences, and deployment architecture'
     ],
-    technologies: ['Node.js', 'TypeScript', 'PostgreSQL', 'Supabase', 'OpenAI API', 'React']
+    technologies: ['Node.js', 'TypeScript', 'PostgreSQL', 'Supabase', 'OpenAI API', 'React', 'NestJS', 'Testing', 'Technical Documentation']
   },
   {
     company: 'SIDO',
