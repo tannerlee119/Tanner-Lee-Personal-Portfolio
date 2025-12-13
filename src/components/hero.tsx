@@ -1,111 +1,96 @@
+'use client'
+
+import { motion } from 'framer-motion'
 import { Button } from '@/components/ui/button'
-import { Avatar, AvatarImage } from '@/components/ui/avatar'
-import { Github, Linkedin, Mail, Download } from 'lucide-react'
+import { Avatar, AvatarImage, AvatarFallback } from '@/components/ui/avatar'
+import { Github, Linkedin, Mail, Download, ArrowRight } from 'lucide-react'
+import Link from 'next/link'
 
 export function Hero() {
-  const handleContactClick = () => {
-    const element = document.querySelector('#contact')
-    if (element) {
-      element.scrollIntoView({ behavior: 'smooth' })
-    }
-  }
-
-  const handleDownloadResume = () => {
-    // Create a link to download the resume
-    const link = document.createElement('a')
-    link.href = '/Tanner Lee Resume.pdf'
-    link.download = 'Tanner_Lee_Resume.pdf'
-    document.body.appendChild(link)
-    link.click()
-    document.body.removeChild(link)
-  }
-
   return (
-    <section className="min-h-screen flex items-center justify-center pt-16 px-4 sm:px-6 lg:px-8">
-      <div className="max-w-7xl mx-auto">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-          {/* Avatar Column */}
-          <div className="flex justify-center lg:justify-start order-1 lg:order-1 opacity-0 animate-hero-reveal">
-            <Avatar className="w-80 h-80 ring-4 ring-blue-500 ring-offset-4 ring-offset-slate-900 hover-magnetic animate-float animate-pulse-glow card-hover-effect">
-              <AvatarImage 
-                src="/Tanner_Lee_Headshot.jpeg" 
-                alt="Tanner Lee professional headshot"
-                className="object-cover"
-                loading="eager"
-              />
-            </Avatar>
-          </div>
+    <section className="min-h-screen flex items-center justify-center pt-16 px-4 sm:px-6 lg:px-8 relative overflow-hidden">
 
-          {/* Content Column */}
-          <div className="text-center lg:text-left order-2 lg:order-2">
-            <h1 className="text-5xl sm:text-6xl font-bold mb-4 opacity-0 animate-fade-in-right animation-delay-200">
-              <span className="text-gray-100">Tanner</span>{' '}
-              <span className="text-gradient text-shimmer">Lee</span>
+      {/* Background Decor */}
+      <div className="absolute inset-0 -z-10 overflow-hidden">
+        <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-blue-500/10 rounded-full blur-3xl animate-pulse-glow" />
+        <div className="absolute bottom-1/4 right-1/4 w-96 h-96 bg-purple-500/10 rounded-full blur-3xl animate-pulse-glow animation-delay-1000" />
+      </div>
+
+      <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+
+        {/* Content */}
+        <div className="order-2 lg:order-1 text-center lg:text-left space-y-8">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5 }}
+          >
+            <h2 className="text-xl md:text-2xl font-medium text-blue-500 mb-4">Hello, I'm</h2>
+            <h1 className="text-5xl sm:text-7xl font-bold tracking-tight mb-6">
+              Tanner Lee<span className="text-blue-500">.</span>
             </h1>
-            
-            <h2 className="text-2xl sm:text-3xl font-semibold text-gray-400 mb-6 opacity-0 animate-fade-in-right animation-delay-400">
+            <h2 className="text-3xl sm:text-4xl font-semibold text-muted-foreground mb-6">
               Software Developer
             </h2>
-            
-            <p className="text-lg text-gray-300 mb-8 max-w-2xl mx-auto lg:mx-0 leading-relaxed opacity-0 animate-fade-in-up animation-delay-600">
-              Recent Computer Science graduate from UW-Madison with experience building scalable web applications. 
+            <p className="text-lg text-muted-foreground max-w-2xl mx-auto lg:mx-0 leading-relaxed">
+              Recent Computer Science graduate from UW-Madison tailored for building scalable,
+              high-performance web applications. I craft digital experiences that are
+              fast, accessible, and visually stunning.
             </p>
+          </motion.div>
 
-            {/* Call-to-Action Buttons */}
-            <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start opacity-0 animate-slide-in-scale animation-delay-800">
-              <Button 
-                onClick={handleContactClick}
-                className="bg-blue-500 hover:bg-blue-600 text-white px-8 py-3 text-lg cursor-pointer"
-              >
-                <Mail className="mr-2 h-5 w-5" />
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5, delay: 0.2 }}
+            className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start"
+          >
+            <Button size="lg" className="text-base px-8 py-6 h-auto" asChild>
+              <Link href="/projects">
+                View Work <ArrowRight className="ml-2 w-4 h-4" />
+              </Link>
+            </Button>
+            <Button size="lg" variant="outline" className="text-base px-8 py-6 h-auto" asChild>
+              <Link href="/contact">
                 Contact Me
-              </Button>
-              
-              <div className="flex gap-3">
-                <Button 
-                  variant="outline" 
-                  size="lg"
-                  asChild
-                >
-                  <a 
-                    href="https://github.com/tannerlee119" 
-                    target="_blank" 
-                    rel="noopener noreferrer"
-                    aria-label="Visit Tanner's GitHub profile"
-                  >
-                    <Github className="h-5 w-5" />
-                  </a>
-                </Button>
-                
-                <Button 
-                  variant="outline" 
-                  size="lg"
-                  asChild
-                >
-                  <a 
-                    href="https://linkedin.com/in/tannerlee119" 
-                    target="_blank" 
-                    rel="noopener noreferrer"
-                    aria-label="Visit Tanner's LinkedIn profile"
-                  >
-                    <Linkedin className="h-5 w-5" />
-                  </a>
-                </Button>
-                
-                <Button 
-                  variant="outline" 
-                  size="lg"
-                  onClick={handleDownloadResume}
-                  aria-label="Download Tanner's resume"
-                  className="cursor-pointer"
-                >
-                  <Download className="mr-2 h-5 w-5" />
-                  Resume
-                </Button>
-              </div>
-            </div>
-          </div>
+              </Link>
+            </Button>
+          </motion.div>
+
+          <motion.div
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ duration: 0.5, delay: 0.4 }}
+            className="flex gap-6 justify-center lg:justify-start pt-4"
+          >
+            <a href="https://github.com/tannerlee119" target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-blue-500 transition-colors">
+              <Github className="w-6 h-6" />
+            </a>
+            <a href="https://linkedin.com/in/tannerlee119" target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-blue-500 transition-colors">
+              <Linkedin className="w-6 h-6" />
+            </a>
+            <a href="mailto:tanner.lee2022@outlook.com" className="text-muted-foreground hover:text-blue-500 transition-colors">
+              <Mail className="w-6 h-6" />
+            </a>
+          </motion.div>
         </div>
+
+        {/* Avatar */}
+        <motion.div
+          initial={{ opacity: 0, scale: 0.8 }}
+          animate={{ opacity: 1, scale: 1 }}
+          transition={{ duration: 0.8, type: "spring" }}
+          className="order-1 lg:order-2 flex justify-center lg:justify-end"
+        >
+          <div className="relative w-72 h-72 sm:w-96 sm:h-96">
+            <div className="absolute inset-0 bg-gradient-to-tr from-blue-500 to-purple-500 rounded-full blur-2xl opacity-20 animate-pulse" />
+            <Avatar className="w-full h-full border-4 border-background shadow-2xl">
+              <AvatarImage src="/Tanner_Lee_Headshot.jpeg" alt="Tanner Lee" className="object-cover" />
+              <AvatarFallback>TL</AvatarFallback>
+            </Avatar>
+          </div>
+        </motion.div>
+
       </div>
     </section>
   )

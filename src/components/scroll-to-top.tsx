@@ -3,6 +3,7 @@
 import { useState, useEffect } from 'react'
 import { Button } from '@/components/ui/button'
 import { ArrowUp } from 'lucide-react'
+import { motion, AnimatePresence } from 'framer-motion'
 
 export function ScrollToTop() {
   const [isVisible, setIsVisible] = useState(false)
@@ -28,17 +29,24 @@ export function ScrollToTop() {
   }
 
   return (
-    <div className="fixed bottom-8 right-8 z-50">
+    <AnimatePresence>
       {isVisible && (
-        <Button
-          onClick={scrollToTop}
-          className="bg-blue-500 hover:bg-blue-600 text-white rounded-full p-3 shadow-lg transition-all duration-300 hover:scale-110"
-          size="icon"
-          aria-label="Scroll to top"
+        <motion.div
+          initial={{ opacity: 0, scale: 0.5 }}
+          animate={{ opacity: 1, scale: 1 }}
+          exit={{ opacity: 0, scale: 0.5 }}
+          className="fixed bottom-8 right-8 z-50"
         >
-          <ArrowUp className="h-5 w-5" />
-        </Button>
+          <Button
+            onClick={scrollToTop}
+            className="rounded-full w-12 h-12 glass border-none hover:bg-white/20 text-foreground shadow-lg"
+            size="icon"
+            aria-label="Scroll to top"
+          >
+            <ArrowUp className="h-5 w-5" />
+          </Button>
+        </motion.div>
       )}
-    </div>
+    </AnimatePresence>
   )
 }
