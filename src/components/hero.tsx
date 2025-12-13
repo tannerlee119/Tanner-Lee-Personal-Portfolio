@@ -3,7 +3,7 @@
 import { motion } from 'framer-motion'
 import { Button } from '@/components/ui/button'
 import { Avatar, AvatarImage, AvatarFallback } from '@/components/ui/avatar'
-import { Github, Linkedin, Mail, Download, ArrowRight } from 'lucide-react'
+import { Github, Linkedin, Mail, ArrowRight } from 'lucide-react'
 import Link from 'next/link'
 
 export function Hero() {
@@ -25,7 +25,7 @@ export function Hero() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5 }}
           >
-            <h2 className="text-xl md:text-2xl font-medium text-blue-500 mb-4">Hello, I'm</h2>
+            <h2 className="text-xl md:text-2xl font-medium text-blue-500 mb-4">Hello, I&apos;m</h2>
             <h1 className="text-5xl sm:text-7xl font-bold tracking-tight mb-6">
               Tanner Lee<span className="text-blue-500">.</span>
             </h1>

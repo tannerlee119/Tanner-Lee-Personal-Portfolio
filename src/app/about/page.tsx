@@ -3,7 +3,7 @@
 import { motion } from 'framer-motion'
 import { Card, CardContent } from '@/components/ui/card'
 import { Badge } from '@/components/ui/badge'
-import { Music, Mountain, Coffee, Footprints, Theater, Trophy, Code, Heart, Zap } from 'lucide-react'
+import { Music, Mountain, Coffee, Footprints, Theater, Trophy, Heart, Zap } from 'lucide-react'
 
 const interests = [
   { name: 'Piano', icon: Music, description: '16 years of experience' },
@@ -53,7 +53,7 @@ export default function AboutPage() {
           </p>
           <p>
             I believe in using code to create real-world impact. Whether building a food blog
-            platform or a data analysis tool, my goal is always to improve the user's life
+            platform or a data analysis tool, my goal is always to improve the user&apos;s life
             through intuitive and performant software.
           </p>
         </motion.div>

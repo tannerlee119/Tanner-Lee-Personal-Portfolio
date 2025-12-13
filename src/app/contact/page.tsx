@@ -97,11 +97,11 @@ export default function ContactPage() {
           >
             <Card className="h-full glass-card border-blue-500/20 bg-gradient-to-br from-blue-500/5 to-purple-500/5">
               <CardHeader>
-                <CardTitle className="text-2xl">Let's build something together.</CardTitle>
+                <CardTitle className="text-2xl">Let&apos;s build something together.</CardTitle>
               </CardHeader>
               <CardContent className="space-y-6">
                 <p className="text-muted-foreground leading-relaxed">
-                  I'm currently looking for full-time software development roles.
+                  I&apos;m currently looking for full-time software development roles.
                   If you have an interesting project or position, please reach out!
                 </p>
 

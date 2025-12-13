@@ -5,7 +5,7 @@ import { motion } from 'framer-motion'
 import { Badge } from '@/components/ui/badge'
 import { Button } from '@/components/ui/button'
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card'
-import { Download, MapPin, Briefcase, Award, Code, Database, Wrench, Globe, Smartphone, Brain } from 'lucide-react'
+import { Download, MapPin, Briefcase, Award, Code, Database, Wrench, Globe, Brain } from 'lucide-react'
 
 // Experience Data
 const experiences = [
@@ -116,7 +116,7 @@ export default function ResumePage() {
 
         {/* Experience Timeline */}
         <div className="space-y-12">
-          {experiences.map((section, sectionIndex) => (
+          {experiences.map((section) => (
             <div key={section.type}>
               <h2 className="text-2xl font-semibold mb-8 flex items-center gap-3">
                 {section.type === 'Technical Experience' ? <Code className="text-blue-500" /> : <Award className="text-blue-500" />}
