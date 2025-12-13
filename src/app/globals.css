@@ -122,26 +122,26 @@
 
 .dark {
   --background: 224 71% 4%;
-  /* Richer, deep blue-black (previously 240 10% 3.9%) */
+  /* Keeping deep blue-black */
   --foreground: 210 40% 98%;
-  /* Soft white */
 
-  --card: 222 47% 11%;
-  /* Lighter than background for depth */
+  --card: 222 47% 14%;
+  /* Ligthened from 11% for better separation */
   --card-foreground: 210 40% 98%;
 
-  --popover: 222 47% 11%;
+  --popover: 222 47% 14%;
   --popover-foreground: 210 40% 98%;
 
   --primary: 210 40% 98%;
   --primary-foreground: 222 47% 11.2%;
 
-  --secondary: 217 32% 17%;
-  /* Explicit secondary color for contrast */
+  --secondary: 217 32% 22%;
+  /* Lightened from 17% */
   --secondary-foreground: 210 40% 98%;
 
-  --muted: 217 32% 17%;
-  --muted-foreground: 215 20% 65%;
+  --muted: 217 32% 22%;
+  --muted-foreground: 215 25% 75%;
+  /* Brightened from 65% for better readability */
 
   --accent: 217 32% 17%;
   --accent-foreground: 210 40% 98%;
@@ -171,6 +171,10 @@
   }
 
   .glass-card {
-    @apply bg-white/50 dark:bg-black/50 backdrop-blur-sm border border-white/20 dark:border-white/10 shadow-sm hover:shadow-md transition-all duration-300;
+    @apply bg-white/50 dark:bg-black/40 backdrop-blur-sm border border-white/20 dark:border-white/10 shadow-sm hover:shadow-md transition-all duration-300;
+    will-change: transform, opacity;
+    transform: translateZ(0);
+    /* Fix for tearing artifact */
+    backface-visibility: hidden;
   }
 }
