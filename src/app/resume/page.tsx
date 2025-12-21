@@ -132,7 +132,7 @@ export default function ResumePage() {
                     transition={{ delay: index * 0.1 }}
                     className="relative"
                   >
-                    <span className="absolute -left-[41px] top-1 h-5 w-5 rounded-full border-4 border-background bg-blue-500" />
+                    <span className="absolute -left-[41px] top-1 h-5 w-5 rounded-full border-4 border-background bg-primary" />
                     <Card className="glass-card border-none">
                       <CardHeader>
                         <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-2 mb-2">

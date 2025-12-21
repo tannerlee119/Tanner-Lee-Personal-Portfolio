@@ -123,7 +123,7 @@ export default function ProjectsPage() {
                         <motion.div key={index} variants={itemVariants}>
                             <Card className="h-full glass-card overflow-hidden group border-none">
                                 <div className="relative aspect-video overflow-hidden">
-                                    <div className="absolute inset-0 bg-gradient-to-tr from-blue-500/20 to-purple-500/20 mix-blend-overlay z-10" />
+                                    <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent z-10" />
                                     <div className="w-full h-full bg-slate-800 flex items-center justify-center group-hover:scale-105 transition-transform duration-500">
                                         {/* Placeholder or Image */}
                                         <div className="text-center p-4">
