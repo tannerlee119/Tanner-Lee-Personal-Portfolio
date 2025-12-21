@@ -175,10 +175,12 @@
 
 @layer utilities {
   .glass {
-    @apply bg-white/70 dark:bg-black/70 backdrop-blur-md border border-white/20 dark:border-white/10;
+    /* Avoid translucency/blur to prevent OS "reduce transparency" turning sections into gray slabs */
+    @apply bg-background border border-border/60;
   }
 
   .glass-card {
-    @apply bg-white/70 dark:bg-black/50 backdrop-blur-md border border-white/20 dark:border-white/10 shadow-sm transition-colors duration-300;
+    /* Solid surfaces (non-gray) using theme tokens */
+    @apply bg-card border border-border/60 shadow-sm transition-colors duration-300;
   }
 }

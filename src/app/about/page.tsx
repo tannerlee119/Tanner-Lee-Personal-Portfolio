@@ -70,7 +70,7 @@ export default function AboutPage() {
           </h2>
           <div className="flex flex-wrap justify-center gap-3">
             {coreValues.map((value, i) => (
-              <Badge key={i} variant="secondary" className="px-4 py-2 text-sm bg-secondary/50 backdrop-blur-sm">
+              <Badge key={i} variant="secondary" className="px-4 py-2 text-sm bg-secondary/40">
                 {value}
               </Badge>
             ))}
@@ -91,7 +91,7 @@ export default function AboutPage() {
                 viewport={{ once: true }}
                 transition={{ delay: index * 0.1 }}
               >
-                <Card className="h-full glass-card border-none hover:bg-white/10 transition-colors">
+                <Card className="h-full glass-card hover:bg-secondary/40 transition-colors">
                   <CardContent className="p-6 text-center space-y-4">
                     <div className="mx-auto w-12 h-12 rounded-full bg-blue-500/10 flex items-center justify-center text-blue-500">
                       <interest.icon className="w-6 h-6" />

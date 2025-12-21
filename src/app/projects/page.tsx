@@ -121,7 +121,7 @@ export default function ProjectsPage() {
                 >
                     {projects.map((project, index) => (
                         <motion.div key={index} variants={itemVariants}>
-                            <Card className="h-full glass-card overflow-hidden group border-none">
+                            <Card className="h-full glass-card overflow-hidden group hover:bg-secondary/30 transition-colors">
                                 <div className="relative aspect-video overflow-hidden">
                                     <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent z-10" />
                                     <div className="w-full h-full bg-slate-800 flex items-center justify-center group-hover:scale-105 transition-transform duration-500">
