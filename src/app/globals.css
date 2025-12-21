@@ -85,73 +85,79 @@
 }
 
 :root {
-  /* Modern Minimalist Palette */
-  --background: 0 0% 100%;
-  /* Pure White */
-  --foreground: 240 10% 3.9%;
-  /* Almost Black */
+  /* BOLD TECH PALETTE (Light Mode) */
+  /* Neutral: Slate */
+  --background: 210 40% 98%;
+  --foreground: 222 47% 11%;
 
   --card: 0 0% 100%;
-  --card-foreground: 240 10% 3.9%;
+  --card-foreground: 222 47% 11%;
 
   --popover: 0 0% 100%;
-  --popover-foreground: 240 10% 3.9%;
+  --popover-foreground: 222 47% 11%;
 
-  --primary: 240 5.9% 10%;
-  /* Deep Dark Gray/Black for primary actions */
-  --primary-foreground: 0 0% 98%;
+  /* Primary: Violet (#764ba2) */
+  --primary: 269 38% 46%;
+  --primary-foreground: 210 40% 98%;
 
-  --secondary: 240 4.8% 95.9%;
-  /* Light Gray for secondary backgrounds */
-  --secondary-foreground: 240 5.9% 10%;
+  /* Secondary: Blue (#667eea) used for secondary elements/gradients */
+  --secondary: 229 76% 66%;
+  --secondary-foreground: 222 47% 11%;
 
-  --muted: 240 4.8% 95.9%;
-  --muted-foreground: 240 3.8% 46.1%;
+  /* Accent: Teal/Cyan for high-vis highlights */
+  --accent: 175 70% 40%;
+  --accent-foreground: 210 40% 98%;
 
-  --accent: 240 4.8% 95.9%;
-  --accent-foreground: 240 5.9% 10%;
+  /* Muted */
+  --muted: 210 40% 96.1%;
+  --muted-foreground: 215 16% 47%;
 
   --destructive: 0 84.2% 60.2%;
-  --destructive-foreground: 0 0% 98%;
+  --destructive-foreground: 210 40% 98%;
 
-  --border: 240 5.9% 90%;
-  --input: 240 5.9% 90%;
-  --ring: 240 5.9% 10%;
+  --border: 214.3 31.8% 91.4%;
+  --input: 214.3 31.8% 91.4%;
+  /* High visibility ring */
+  --ring: 269 38% 46%;
+
   --radius: 0.5rem;
 }
 
 .dark {
+  /* BOLD TECH PALETTE (Dark Mode) */
   --background: 224 71% 4%;
-  /* Keeping deep blue-black */
+  /* Deep Blue Black */
   --foreground: 210 40% 98%;
+  /* Soft White */
 
   --card: 222 47% 14%;
-  /* Ligthened from 11% for better separation */
+  /* Slightly lighter than bg */
   --card-foreground: 210 40% 98%;
 
   --popover: 222 47% 14%;
   --popover-foreground: 210 40% 98%;
 
-  --primary: 210 40% 98%;
-  --primary-foreground: 222 47% 11.2%;
+  /* Primary: Light Violet (#a78bfa) for contrast on dark */
+  --primary: 267 91% 76%;
+  --primary-foreground: 222 47% 11%;
 
-  --secondary: 217 32% 22%;
-  /* Lightened from 17% */
-  --secondary-foreground: 210 40% 98%;
+  /* Secondary: Light Blue (#60a5fa equivalent) */
+  --secondary: 229 85% 75%;
+  --secondary-foreground: 222 47% 11%;
 
-  --muted: 217 32% 22%;
-  --muted-foreground: 215 25% 75%;
-  /* Brightened from 65% for better readability */
+  /* Accent: Bright Cyan */
+  --accent: 175 70% 60%;
+  --accent-foreground: 222 47% 11%;
 
-  --accent: 217 32% 17%;
-  --accent-foreground: 210 40% 98%;
+  --muted: 217 32% 17%;
+  --muted-foreground: 215 20% 75%;
 
   --destructive: 0 62.8% 30.6%;
-  --destructive-foreground: 0 0% 98%;
+  --destructive-foreground: 210 40% 98%;
 
-  --border: 240 3.7% 15.9%;
-  --input: 240 3.7% 15.9%;
-  --ring: 240 4.9% 83.9%;
+  --border: 217 32% 22%;
+  --input: 217 32% 22%;
+  --ring: 267 91% 76%;
 }
 
 @layer base {

@@ -40,7 +40,7 @@ export function Navigation() {
             href="/"
             className="text-2xl font-bold tracking-tighter"
           >
-            TL<span className="text-blue-500">.</span>
+            TL<span className="text-primary">.</span>
           </Link>
 
           {/* Desktop Navigation */}
@@ -49,19 +49,19 @@ export function Navigation() {
               <Link
                 key={item.name}
                 href={item.href}
-                className={`text-sm font-medium transition-colors hover:text-blue-500 relative group py-2 ${pathname === item.href
-                    ? 'text-foreground'
-                    : 'text-muted-foreground'
+                className={`text-sm font-medium transition-colors hover:text-primary relative group py-2 ${pathname === item.href
+                  ? 'text-foreground'
+                  : 'text-muted-foreground'
                   }`}
               >
                 {item.name}
                 {pathname === item.href && (
                   <motion.div
                     layoutId="underline"
-                    className="absolute left-0 right-0 bottom-0 h-0.5 bg-blue-500"
+                    className="absolute left-0 right-0 bottom-0 h-0.5 bg-primary"
                   />
                 )}
-                <span className="absolute left-0 right-0 bottom-0 h-0.5 bg-blue-500 scale-x-0 group-hover:scale-x-100 transition-transform origin-left" />
+                <span className="absolute left-0 right-0 bottom-0 h-0.5 bg-primary scale-x-0 group-hover:scale-x-100 transition-transform origin-left" />
               </Link>
             ))}
           </nav>
@@ -96,8 +96,8 @@ export function Navigation() {
                   href={item.href}
                   onClick={() => setIsOpen(false)}
                   className={`block px-4 py-3 text-lg font-medium rounded-lg transition-colors ${pathname === item.href
-                      ? 'bg-blue-500/10 text-blue-500'
-                      : 'text-muted-foreground hover:bg-white/5 dark:hover:bg-white/5'
+                    ? 'bg-primary/10 text-primary'
+                    : 'text-muted-foreground hover:bg-white/5 dark:hover:bg-white/5'
                     }`}
                 >
                   {item.name}
