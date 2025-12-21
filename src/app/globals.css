@@ -87,7 +87,8 @@
 :root {
   /* BOLD TECH PALETTE (Light Mode) */
   /* Neutral: Slate */
-  --background: 210 40% 98%;
+  /* Pure white background (removes the gray cast) */
+  --background: 0 0% 100%;
   --foreground: 222 47% 11%;
 
   --card: 0 0% 100%;
@@ -109,14 +110,15 @@
   --accent-foreground: 210 40% 98%;
 
   /* Muted */
-  --muted: 210 40% 96.1%;
-  --muted-foreground: 215 16% 47%;
+  /* Cool-tinted surfaces (avoid "gray on white") */
+  --muted: 225 100% 98%;
+  --muted-foreground: 223 28% 36%;
 
   --destructive: 0 84.2% 60.2%;
   --destructive-foreground: 210 40% 98%;
 
-  --border: 214.3 31.8% 91.4%;
-  --input: 214.3 31.8% 91.4%;
+  --border: 222 90% 92%;
+  --input: 222 90% 92%;
   /* High visibility ring */
   --ring: 269 38% 46%;
 
