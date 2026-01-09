@@ -55,7 +55,7 @@ export default function ContactPage() {
           >
             <div className="space-y-4">
               {contactMethods.map((method, index) => (
-                <Card key={index} className="glass-card hover:bg-secondary/30 transition-colors">
+                <Card key={index} className="glass-card border-none hover:bg-white/5 transition-colors">
                   <CardContent className="flex items-center gap-4 p-4">
                     <div className="p-3 bg-blue-500/10 rounded-full text-blue-500">
                       <method.icon className="w-5 h-5" />

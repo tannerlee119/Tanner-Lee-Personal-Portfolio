@@ -97,7 +97,7 @@ export function Navigation() {
                   onClick={() => setIsOpen(false)}
                   className={`block px-4 py-3 text-lg font-medium rounded-lg transition-colors ${pathname === item.href
                     ? 'bg-primary/10 text-primary'
-                    : 'text-muted-foreground hover:bg-secondary/30 hover:text-foreground'
+                    : 'text-muted-foreground hover:bg-white/5 dark:hover:bg-white/5'
                     }`}
                 >
                   {item.name}

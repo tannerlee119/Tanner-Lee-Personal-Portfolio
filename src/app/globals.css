@@ -87,8 +87,7 @@
 :root {
   /* BOLD TECH PALETTE (Light Mode) */
   /* Neutral: Slate */
-  /* Pure white background (removes the gray cast) */
-  --background: 0 0% 100%;
+  --background: 210 40% 98%;
   --foreground: 222 47% 11%;
 
   --card: 0 0% 100%;
@@ -110,15 +109,14 @@
   --accent-foreground: 210 40% 98%;
 
   /* Muted */
-  /* Cool-tinted surfaces (avoid "gray on white") */
-  --muted: 225 100% 98%;
-  --muted-foreground: 223 28% 36%;
+  --muted: 210 40% 96.1%;
+  --muted-foreground: 215 16% 47%;
 
   --destructive: 0 84.2% 60.2%;
   --destructive-foreground: 210 40% 98%;
 
-  --border: 222 90% 92%;
-  --input: 222 90% 92%;
+  --border: 214.3 31.8% 91.4%;
+  --input: 214.3 31.8% 91.4%;
   /* High visibility ring */
   --ring: 269 38% 46%;
 
@@ -175,12 +173,10 @@
 
 @layer utilities {
   .glass {
-    /* Avoid translucency/blur to prevent OS "reduce transparency" turning sections into gray slabs */
-    @apply bg-background border border-border/60;
+    @apply bg-white/70 dark:bg-black/70 backdrop-blur-md border border-white/20 dark:border-white/10;
   }
 
   .glass-card {
-    /* Solid surfaces (non-gray) using theme tokens */
-    @apply bg-card border border-border/60 shadow-sm transition-colors duration-300;
+    @apply bg-white/70 dark:bg-black/50 backdrop-blur-md border border-white/20 dark:border-white/10 shadow-sm transition-colors duration-300;
   }
 }

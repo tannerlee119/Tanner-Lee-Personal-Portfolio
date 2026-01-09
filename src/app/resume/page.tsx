@@ -133,7 +133,7 @@ export default function ResumePage() {
                     className="relative"
                   >
                     <span className="absolute -left-[41px] top-1 h-5 w-5 rounded-full border-4 border-background bg-primary" />
-                    <Card className="glass-card hover:bg-secondary/20 transition-colors">
+                    <Card className="glass-card border-none">
                       <CardHeader>
                         <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-2 mb-2">
                           <CardTitle className="text-xl font-bold">{item.role}</CardTitle>
@@ -175,7 +175,7 @@ export default function ResumePage() {
                 viewport={{ once: true }}
                 transition={{ delay: index * 0.1 }}
               >
-                <Card className="h-full glass-card hover:bg-secondary/20 transition-colors">
+                <Card className="h-full glass-card border-none">
                   <CardHeader className="flex flex-row items-center gap-4 pb-2">
                     <div className="p-2 bg-blue-500/10 rounded-lg">
                       <category.icon className="w-6 h-6 text-blue-500" />
@@ -185,7 +185,7 @@ export default function ResumePage() {
                   <CardContent>
                     <div className="flex flex-wrap gap-2">
                       {category.skills.map((skill) => (
-                        <Badge key={skill} variant="outline" className="bg-secondary/20">
+                        <Badge key={skill} variant="outline" className="bg-background/50">
                           {skill}
                         </Badge>
                       ))}

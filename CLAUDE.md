@@ -70,8 +70,8 @@ src/
 
 **Color Palette** (Tailwind classes):
 - Background: `bg-slate-900` (#0f172a)
-- Primary Text: `text-white` (#ffffff)
-- Secondary Text: `text-blue-100/90` (soft blue-white)
+- Primary Text: `text-gray-100` (#f3f4f6)
+- Secondary Text: `text-gray-400` (#9ca3af)
 - Primary Accent: `text-blue-500` (#3b82f6)
 - Cards: `bg-slate-800/20` with hover effects
 
