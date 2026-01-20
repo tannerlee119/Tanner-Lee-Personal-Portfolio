@@ -2,7 +2,7 @@
 
 A modern, responsive personal portfolio website showcasing my projects, experience, and skills.
 
-## 🛠️ Tech Stack
+## Tech Stack
 
 - **Framework**: [Next.js 15](https://nextjs.org/) (App Router)
 - **Language**: TypeScript
@@ -11,7 +11,7 @@ A modern, responsive personal portfolio website showcasing my projects, experien
 - **UI Components**: Radix UI
 - **Icons**: Lucide React
 
-## 🚀 Getting Started
+## Getting Started
 
 ### Prerequisites
 
@@ -38,7 +38,7 @@ A modern, responsive personal portfolio website showcasing my projects, experien
 
 4. Open [http://localhost:3000](http://localhost:3000) in your browser.
 
-## 📁 Project Structure
+## Project Structure
 
 ```
 src/
@@ -54,7 +54,7 @@ src/
 └── lib/             # Utility functions
 ```
 
-## 📜 Available Scripts
+## Available Scripts
 
 | Command          | Description                      |
 | ---------------- | -------------------------------- |
@@ -63,6 +63,4 @@ src/
 | `npm run start`  | Start production server          |
 | `npm run lint`   | Run ESLint                       |
 
-## 📄 License
 
-This project is private and not licensed for public use.
