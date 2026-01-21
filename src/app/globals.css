@@ -1,7 +1,9 @@
 @import "tailwindcss";
 
 @theme {
+  /* Font Families - Editorial Style */
   --font-sans: "Inter", system-ui, -apple-system, sans-serif;
+  --font-serif: "Playfair Display", "Georgia", serif;
 
   /* Custom Animations */
   --animate-fade-in: fadeIn 0.8s ease-out forwards;
@@ -50,7 +52,7 @@
   @keyframes slideUp {
     from {
       opacity: 0;
-      transform: translateY(20px);
+      transform: translateY(30px);
     }
 
     to {
@@ -62,7 +64,7 @@
   @keyframes slideInRight {
     from {
       opacity: 0;
-      transform: translateX(20px);
+      transform: translateX(30px);
     }
 
     to {
@@ -85,80 +87,51 @@
 }
 
 :root {
-  /* BOLD TECH PALETTE (Light Mode) - ACCESSIBLE CONTRAST */
-  /* Neutral: Slate */
-  --background: 210 40% 98%;
-  --foreground: 222 47% 11%;
+  /* EDITORIAL DARK THEME - Minimalist */
+  --background: 0 0% 0%;
+  /* Pure black #000000 */
+  --foreground: 0 0% 92%;
+  /* Off-white #EAEAEA */
 
-  --card: 0 0% 100%;
-  --card-foreground: 222 47% 11%;
+  --card: 0 0% 6%;
+  /* Subtle dark grey for cards */
+  --card-foreground: 0 0% 92%;
 
-  --popover: 0 0% 100%;
-  --popover-foreground: 222 47% 11%;
+  --popover: 0 0% 6%;
+  --popover-foreground: 0 0% 92%;
 
-  /* Primary: Violet (#764ba2) */
-  --primary: 269 38% 46%;
-  --primary-foreground: 210 40% 98%;
+  /* Primary: Off-white (no color accents) */
+  --primary: 0 0% 92%;
+  --primary-foreground: 0 0% 0%;
 
-  /* Secondary: Blue (#667eea) used for secondary elements/gradients */
-  --secondary: 229 76% 66%;
-  --secondary-foreground: 222 47% 11%;
+  /* Secondary: Medium grey */
+  --secondary: 0 0% 15%;
+  --secondary-foreground: 0 0% 92%;
 
-  /* Accent: Teal/Cyan for high-vis highlights */
-  --accent: 175 70% 40%;
-  --accent-foreground: 210 40% 98%;
+  /* Accent: Light grey */
+  --accent: 0 0% 20%;
+  --accent-foreground: 0 0% 92%;
 
-  /* Muted - IMPROVED CONTRAST: from 47% to 35% lightness */
-  --muted: 210 40% 96.1%;
-  --muted-foreground: 215 25% 35%;
+  /* Muted: Grey tones for secondary text */
+  --muted: 0 0% 10%;
+  --muted-foreground: 0 0% 50%;
+  /* #808080 - readable grey */
 
-  --destructive: 0 84.2% 60.2%;
-  --destructive-foreground: 210 40% 98%;
+  --destructive: 0 62% 50%;
+  --destructive-foreground: 0 0% 98%;
 
-  --border: 214.3 31.8% 91.4%;
-  --input: 214.3 31.8% 91.4%;
-  /* High visibility ring */
-  --ring: 269 38% 46%;
+  --border: 0 0% 18%;
+  /* Subtle borders */
+  --input: 0 0% 18%;
+  --ring: 0 0% 92%;
 
-  --radius: 0.5rem;
+  --radius: 0.75rem;
 }
 
-.dark {
-  /* BOLD TECH PALETTE (Dark Mode) - ACCESSIBLE CONTRAST */
-  --background: 224 71% 4%;
-  /* Deep Blue Black */
-  --foreground: 210 40% 98%;
-  /* Soft White */
-
-  --card: 222 47% 14%;
-  /* Slightly lighter than bg */
-  --card-foreground: 210 40% 98%;
-
-  --popover: 222 47% 14%;
-  --popover-foreground: 210 40% 98%;
-
-  /* Primary: Light Violet (#a78bfa) for contrast on dark */
-  --primary: 267 91% 76%;
-  --primary-foreground: 222 47% 11%;
-
-  /* Secondary: Light Blue (#60a5fa equivalent) */
-  --secondary: 229 85% 75%;
-  --secondary-foreground: 222 47% 11%;
-
-  /* Accent: Bright Cyan */
-  --accent: 175 70% 60%;
-  --accent-foreground: 222 47% 11%;
-
-  /* Muted - IMPROVED CONTRAST: brighter for dark mode */
-  --muted: 217 32% 17%;
-  --muted-foreground: 215 20% 70%;
-
-  --destructive: 0 62.8% 30.6%;
-  --destructive-foreground: 210 40% 98%;
-
-  --border: 217 32% 22%;
-  --input: 217 32% 22%;
-  --ring: 267 91% 76%;
+/* Force dark mode only - editorial design */
+.dark,
+:root {
+  color-scheme: dark;
 }
 
 @layer base {
@@ -166,30 +139,76 @@
     @apply border-border;
   }
 
+  html {
+    scroll-behavior: smooth;
+  }
+
   body {
     @apply bg-background text-foreground font-sans antialiased;
     font-feature-settings: "rlig" 1, "calt" 1;
   }
 
-  /* Accessible focus states for keyboard navigation */
+  /* Accessible focus states */
   *:focus-visible {
     @apply outline-none ring-2 ring-ring ring-offset-2 ring-offset-background;
+  }
+
+  /* Serif font class for headings */
+  .font-serif {
+    font-family: "Playfair Display", "Georgia", serif;
   }
 }
 
 @layer utilities {
 
-  /* Glass effects with IMPROVED READABILITY */
-  .glass {
-    @apply bg-white/85 dark:bg-black/80 backdrop-blur-lg border border-white/30 dark:border-white/15;
+  /* Letter spacing transition for hover effects */
+  .tracking-hover {
+    @apply transition-all duration-300 ease-out;
   }
 
-  .glass-card {
-    @apply bg-white/90 dark:bg-slate-900/85 backdrop-blur-lg border border-slate-200/50 dark:border-white/10 shadow-sm transition-colors duration-300;
+  .tracking-hover:hover {
+    letter-spacing: 0.15em;
+    @apply text-foreground;
   }
 
-  /* High contrast text utility for important content */
-  .text-readable {
-    @apply text-foreground/90;
+  /* Minimal card styling - no glass effects */
+  .editorial-card {
+    @apply bg-card/50 border border-border/50 rounded-xl transition-all duration-300;
+  }
+
+  .editorial-card:hover {
+    @apply border-border bg-card;
+  }
+
+  /* Outlined pill badge */
+  .pill-outline {
+    @apply border border-foreground/30 text-foreground/80 bg-transparent px-3 py-1 rounded-full text-xs uppercase tracking-widest transition-all duration-200;
+  }
+
+  .pill-outline:hover {
+    @apply border-foreground/60 text-foreground;
+  }
+
+  /* Arrow link styling */
+  .arrow-link {
+    @apply inline-flex items-center gap-2 text-sm uppercase tracking-widest text-muted-foreground transition-all duration-300;
+  }
+
+  .arrow-link:hover {
+    @apply text-foreground tracking-[0.2em];
+  }
+
+  /* Section spacing */
+  .section-spacing {
+    @apply py-24 md:py-32;
+  }
+
+  /* Editorial heading styles */
+  .heading-editorial {
+    @apply font-serif text-5xl md:text-7xl font-normal tracking-tight;
+  }
+
+  .subheading-editorial {
+    @apply uppercase tracking-[0.3em] text-sm text-muted-foreground font-medium;
   }
 }

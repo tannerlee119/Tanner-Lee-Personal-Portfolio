@@ -1,16 +1,11 @@
-
 'use client'
 
 import { motion } from 'framer-motion'
-import { Badge } from '@/components/ui/badge'
-import { Button } from '@/components/ui/button'
-import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card'
-import { Download, MapPin, Briefcase, Award, Code, Database, Wrench, Globe, Brain } from 'lucide-react'
+import { Download, ArrowUpRight } from 'lucide-react'
 
-// Experience Data
 const experiences = [
   {
-    type: 'Technical Experience',
+    type: 'Experience',
     items: [
       {
         company: 'Gabooja',
@@ -20,7 +15,7 @@ const experiences = [
         achievements: [
           'Engineered full-stack web applications with Node.js architecture and real-time updates',
           'Built scalable user interfaces including Gabooja\'s Creator Discovery platform',
-          'Implemented AI data-enrichment features with OpenAI API, TypeScript, and PostgreSQL (Supabase)',
+          'Implemented AI data-enrichment features with OpenAI API, TypeScript, and PostgreSQL',
           'Created detailed architecture documentation with C4 diagrams'
         ]
       },
@@ -30,7 +25,7 @@ const experiences = [
         period: 'Jan 2024 - Aug 2024',
         location: 'Remote',
         achievements: [
-          'Manually reviewed and cleaned League of Legends match data',
+          'Reviewed and cleaned League of Legends match data for analysis',
           'Identified inconsistent statistics and updated team composition records',
           'Troubleshot API connectivity issues with Riot Games servers'
         ]
@@ -46,8 +41,8 @@ const experiences = [
         period: 'Jan 2025 - May 2025',
         location: 'Madison, WI',
         achievements: [
-          'Developed and executed a 12-week, project-based curriculum for 25 elementary students',
-          'Introduced foundational computer science principles using MIT\'s Scratch platform'
+          'Developed a 12-week curriculum for 25 elementary students',
+          'Introduced foundational computer science using MIT\'s Scratch platform'
         ]
       },
       {
@@ -56,35 +51,18 @@ const experiences = [
         period: 'Jan 2025 - May 2025',
         location: 'Remote',
         achievements: [
-          'Achieved 30,000+ engagements creating high-impact content including blogs and video tutorials'
+          'Achieved 30,000+ engagements creating blogs and video tutorials'
         ]
       }
     ]
   }
 ]
 
-// Skills Data
 const skillCategories = [
-  {
-    title: 'Languages',
-    icon: Code,
-    skills: ['TypeScript', 'JavaScript', 'Python', 'Java', 'HTML5', 'CSS3', 'SQL']
-  },
-  {
-    title: 'Frameworks',
-    icon: Globe,
-    skills: ['React', 'Next.js', 'Node.js', 'React Native', 'Tailwind CSS', 'NestJS']
-  },
-  {
-    title: 'Backend',
-    icon: Database,
-    skills: ['PostgreSQL', 'Firebase', 'Supabase', 'Drizzle ORM', 'SQLite']
-  },
-  {
-    title: 'Tools',
-    icon: Wrench,
-    skills: ['Git', 'VS Code', 'Cursor', 'OpenAI API', 'Google Places API']
-  }
+  { title: 'Languages', skills: ['TypeScript', 'JavaScript', 'Python', 'Java', 'SQL'] },
+  { title: 'Frameworks', skills: ['React', 'Next.js', 'Node.js', 'React Native', 'NestJS'] },
+  { title: 'Backend', skills: ['PostgreSQL', 'Firebase', 'Supabase', 'Redis'] },
+  { title: 'Tools', skills: ['Git', 'Docker', 'OpenAI API', 'Playwright'] }
 ]
 
 export default function ResumePage() {
@@ -98,107 +76,128 @@ export default function ResumePage() {
   }
 
   return (
-    <div className="min-h-screen pt-24 pb-16 px-4 sm:px-6 lg:px-8 bg-background">
-      <div className="max-w-4xl mx-auto space-y-16">
-
+    <div className="min-h-screen pt-32 pb-24 px-6 lg:px-8">
+      <div className="max-w-3xl mx-auto">
+        
         {/* Header */}
         <motion.div
-          initial={{ opacity: 0, y: -20 }}
+          initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
-          className="text-center space-y-6"
+          transition={{ duration: 0.6 }}
+          className="text-center mb-20"
         >
-          <h1 className="text-4xl md:text-5xl font-bold tracking-tight">Resume</h1>
-          <p className="text-xl text-foreground/70">My professional journey and technical expertise.</p>
-          <Button onClick={handleDownloadResume} className="gap-2" size="lg">
-            <Download className="w-4 h-4" /> Download PDF
-          </Button>
+          <h1 className="font-[family-name:var(--font-playfair)] text-5xl md:text-7xl font-normal mb-6">
+            Resume
+          </h1>
+          <p className="text-muted-foreground text-lg mb-8">
+            My professional journey and technical expertise.
+          </p>
+          <button
+            onClick={handleDownloadResume}
+            className="group inline-flex items-center gap-3 px-6 py-3 
+                     border border-foreground/30 text-foreground rounded-full
+                     uppercase tracking-[0.15em] text-sm
+                     transition-all duration-300 hover:border-foreground hover:tracking-[0.2em]"
+          >
+            <Download className="w-4 h-4" />
+            Download PDF
+          </button>
         </motion.div>
 
         {/* Experience Timeline */}
-        <div className="space-y-12">
-          {experiences.map((section) => (
-            <div key={section.type}>
-              <h2 className="text-2xl font-semibold mb-8 flex items-center gap-3">
-                {section.type === 'Technical Experience' ? <Code className="text-blue-500" /> : <Award className="text-blue-500" />}
-                {section.type}
-              </h2>
-              <div className="space-y-8 relative border-l-2 border-border ml-3 pl-8 pb-4">
-                {section.items.map((item, index) => (
-                  <motion.div
-                    key={index}
-                    initial={{ opacity: 0, x: -20 }}
-                    whileInView={{ opacity: 1, x: 0 }}
-                    viewport={{ once: true }}
-                    transition={{ delay: index * 0.1 }}
-                    className="relative"
-                  >
-                    <span className="absolute -left-[41px] top-1 h-5 w-5 rounded-full border-4 border-background bg-primary" />
-                    <Card className="glass-card border-none">
-                      <CardHeader>
-                        <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-2 mb-2">
-                          <CardTitle className="text-xl font-bold">{item.role}</CardTitle>
-                          <Badge variant="secondary" className="w-fit">{item.period}</Badge>
-                        </div>
-                        <div className="flex items-center gap-2 text-foreground/70 font-medium">
-                          <Briefcase className="w-4 h-4" /> {item.company}
-                          <span className="mx-2">•</span>
-                          <MapPin className="w-4 h-4" /> {item.location}
-                        </div>
-                      </CardHeader>
-                      <CardContent>
-                        <ul className="space-y-2 text-foreground/75 text-sm list-disc list-inside">
-                          {item.achievements.map((achievement, i) => (
-                            <li key={i}>{achievement}</li>
-                          ))}
-                        </ul>
-                      </CardContent>
-                    </Card>
-                  </motion.div>
-                ))}
-              </div>
+        {experiences.map((section, sectionIndex) => (
+          <motion.div
+            key={section.type}
+            initial={{ opacity: 0 }}
+            whileInView={{ opacity: 1 }}
+            viewport={{ once: true }}
+            transition={{ delay: sectionIndex * 0.2 }}
+            className="mb-20"
+          >
+            <h2 className="text-sm uppercase tracking-[0.2em] text-muted-foreground mb-10">
+              {section.type}
+            </h2>
+            
+            <div className="space-y-12 relative">
+              {/* Vertical line */}
+              <div className="absolute left-0 top-2 bottom-2 w-px bg-border/50" />
+              
+              {section.items.map((item, index) => (
+                <motion.div
+                  key={index}
+                  initial={{ opacity: 0, x: -20 }}
+                  whileInView={{ opacity: 1, x: 0 }}
+                  viewport={{ once: true }}
+                  transition={{ delay: index * 0.1 }}
+                  className="pl-8 relative"
+                >
+                  {/* Dot on timeline */}
+                  <div className="absolute left-0 top-2 w-2 h-2 -translate-x-[3px] bg-foreground rounded-full" />
+                  
+                  <div className="flex flex-col md:flex-row md:items-start md:justify-between gap-2 mb-4">
+                    <div>
+                      <h3 className="text-xl font-medium text-foreground">{item.role}</h3>
+                      <p className="text-muted-foreground">
+                        {item.company} · {item.location}
+                      </p>
+                    </div>
+                    <span className="text-sm text-muted-foreground whitespace-nowrap">
+                      {item.period}
+                    </span>
+                  </div>
+                  
+                  <ul className="space-y-2">
+                    {item.achievements.map((achievement, i) => (
+                      <li key={i} className="text-muted-foreground text-sm leading-relaxed pl-4 relative">
+                        <span className="absolute left-0 top-2 w-1 h-1 bg-muted-foreground/50 rounded-full" />
+                        {achievement}
+                      </li>
+                    ))}
+                  </ul>
+                </motion.div>
+              ))}
             </div>
-          ))}
-        </div>
+          </motion.div>
+        ))}
 
-        {/* Skills Grid */}
-        <div>
-          <h2 className="text-2xl font-semibold mb-8 flex items-center gap-3">
-            <Brain className="text-blue-500" />
+        {/* Skills */}
+        <motion.div
+          initial={{ opacity: 0 }}
+          whileInView={{ opacity: 1 }}
+          viewport={{ once: true }}
+        >
+          <h2 className="text-sm uppercase tracking-[0.2em] text-muted-foreground mb-10">
             Skills
           </h2>
-          <div className="grid gap-6 md:grid-cols-2">
+          
+          <div className="grid grid-cols-2 gap-10">
             {skillCategories.map((category, index) => (
               <motion.div
                 key={category.title}
-                initial={{ opacity: 0, scale: 0.95 }}
-                whileInView={{ opacity: 1, scale: 1 }}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ delay: index * 0.1 }}
               >
-                <Card className="h-full glass-card border-none">
-                  <CardHeader className="flex flex-row items-center gap-4 pb-2">
-                    <div className="p-2 bg-blue-500/10 rounded-lg">
-                      <category.icon className="w-6 h-6 text-blue-500" />
-                    </div>
-                    <CardTitle className="text-lg">{category.title}</CardTitle>
-                  </CardHeader>
-                  <CardContent>
-                    <div className="flex flex-wrap gap-2">
-                      {category.skills.map((skill) => (
-                        <Badge key={skill} variant="outline" className="bg-background/50">
-                          {skill}
-                        </Badge>
-                      ))}
-                    </div>
-                  </CardContent>
-                </Card>
+                <h3 className="text-foreground font-medium mb-4">{category.title}</h3>
+                <div className="flex flex-wrap gap-2">
+                  {category.skills.map((skill) => (
+                    <span
+                      key={skill}
+                      className="px-3 py-1.5 text-xs uppercase tracking-[0.1em] 
+                               border border-foreground/20 rounded-full text-muted-foreground
+                               transition-colors duration-200 hover:border-foreground/40 hover:text-foreground"
+                    >
+                      {skill}
+                    </span>
+                  ))}
+                </div>
               </motion.div>
             ))}
           </div>
-        </div>
+        </motion.div>
 
       </div>
     </div>
   )
 }
-

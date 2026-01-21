@@ -1,9 +1,7 @@
 'use client'
 
 import { motion } from 'framer-motion'
-import { Card, CardContent } from '@/components/ui/card'
-import { Badge } from '@/components/ui/badge'
-import { Music, Mountain, Coffee, Footprints, Theater, Trophy, Heart, Zap } from 'lucide-react'
+import { Music, Mountain, Coffee, Footprints, Theater, Trophy } from 'lucide-react'
 
 const interests = [
   { name: 'Piano', icon: Music, description: '16 years of experience' },
@@ -21,91 +19,101 @@ const coreValues = [
 
 export default function AboutPage() {
   return (
-    <div className="min-h-screen pt-24 pb-16 px-4 sm:px-6 lg:px-8 bg-background">
-      <div className="max-w-4xl mx-auto space-y-20">
-
-        {/* Intro Section */}
+    <div className="min-h-screen pt-32 pb-24 px-6 lg:px-8">
+      <div className="max-w-3xl mx-auto">
+        
+        {/* Header */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
-          className="text-center space-y-6"
+          className="text-center mb-20"
         >
-          <h1 className="text-4xl md:text-5xl font-bold tracking-tight">About Me</h1>
-          <p className="text-xl text-foreground/70 max-w-2xl mx-auto leading-relaxed">
-            I am a passionate software developer recently graduated from UW-Madison,
-            driven by curiosity and a deep love for building meaningful solutions.
+          <h1 className="font-[family-name:var(--font-playfair)] text-5xl md:text-7xl font-normal mb-6">
+            About
+          </h1>
+          <p className="text-muted-foreground text-lg">
+            Passionate about building meaningful solutions.
           </p>
         </motion.div>
 
         {/* Narrative */}
         <motion.div
           initial={{ opacity: 0 }}
-          whileInView={{ opacity: 1 }}
-          viewport={{ once: true }}
-          transition={{ delay: 0.2 }}
-          className="prose prose-lg dark:prose-invert max-w-none text-foreground/75 space-y-6"
+          animate={{ opacity: 1 }}
+          transition={{ delay: 0.2, duration: 0.6 }}
+          className="space-y-8 mb-24"
         >
-          <p>
+          <p className="text-lg text-foreground/90 leading-relaxed">
+            I am a software developer recently graduated from UW-Madison,
+            driven by curiosity and a deep love for building meaningful solutions.
+          </p>
+          <p className="text-lg text-muted-foreground leading-relaxed">
             My journey into technology began with a simple curiosity about how things work.
             That curiosity evolved into a career path where I can combine technical problem-solving
             with creative design.
           </p>
-          <p>
+          <p className="text-lg text-muted-foreground leading-relaxed">
             I believe in using code to create real-world impact. Whether building a food blog
             platform or a data analysis tool, my goal is always to improve the user&apos;s life
             through intuitive and performant software.
           </p>
         </motion.div>
 
-        {/* Core Values */}
+        {/* Values */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          transition={{ delay: 0.3 }}
+          className="mb-24"
         >
-          <h2 className="text-2xl font-bold mb-8 flex items-center gap-2 justify-center">
-            <Heart className="text-red-500 w-6 h-6" /> Core Values
+          <h2 className="font-[family-name:var(--font-playfair)] text-3xl font-normal mb-10 text-center">
+            Values
           </h2>
-          <div className="flex flex-wrap justify-center gap-3">
+          <div className="flex flex-wrap justify-center gap-4">
             {coreValues.map((value, i) => (
-              <Badge key={i} variant="secondary" className="px-4 py-2 text-sm bg-secondary/50 backdrop-blur-sm">
+              <span
+                key={i}
+                className="px-5 py-2 text-sm uppercase tracking-[0.12em] border border-foreground/20 
+                         rounded-full text-muted-foreground transition-colors duration-200
+                         hover:border-foreground/40 hover:text-foreground"
+              >
                 {value}
-              </Badge>
+              </span>
             ))}
           </div>
         </motion.div>
 
-        {/* Interests Grid */}
-        <div className="space-y-8">
-          <h2 className="text-2xl font-bold text-center flex items-center justify-center gap-2">
-            <Zap className="text-yellow-500 w-6 h-6" /> Beyond Coding
+        {/* Interests */}
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+        >
+          <h2 className="font-[family-name:var(--font-playfair)] text-3xl font-normal mb-10 text-center">
+            Beyond Code
           </h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+          <div className="grid grid-cols-2 md:grid-cols-3 gap-8">
             {interests.map((interest, index) => (
               <motion.div
                 key={interest.name}
-                initial={{ opacity: 0, scale: 0.9 }}
-                whileInView={{ opacity: 1, scale: 1 }}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ delay: index * 0.1 }}
+                className="text-center group"
               >
-                <Card className="h-full glass-card border-none hover:bg-white/10 transition-colors">
-                  <CardContent className="p-6 text-center space-y-4">
-                    <div className="mx-auto w-12 h-12 rounded-full bg-blue-500/10 flex items-center justify-center text-blue-500">
-                      <interest.icon className="w-6 h-6" />
-                    </div>
-                    <div>
-                      <h3 className="font-semibold text-foreground">{interest.name}</h3>
-                      <p className="text-sm text-foreground/70">{interest.description}</p>
-                    </div>
-                  </CardContent>
-                </Card>
+                <div className="inline-flex items-center justify-center w-12 h-12 mb-4 
+                              border border-foreground/20 rounded-full 
+                              transition-colors duration-300 group-hover:border-foreground/40">
+                  <interest.icon className="w-5 h-5 text-muted-foreground group-hover:text-foreground transition-colors" />
+                </div>
+                <h3 className="text-foreground font-medium mb-1">{interest.name}</h3>
+                <p className="text-sm text-muted-foreground">{interest.description}</p>
               </motion.div>
             ))}
           </div>
-        </div>
+        </motion.div>
 
       </div>
     </div>
