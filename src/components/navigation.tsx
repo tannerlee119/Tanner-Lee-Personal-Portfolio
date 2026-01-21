@@ -51,7 +51,7 @@ export function Navigation() {
                 href={item.href}
                 className={`text-sm font-medium transition-colors hover:text-primary relative group py-2 ${pathname === item.href
                   ? 'text-foreground'
-                  : 'text-muted-foreground'
+                  : 'text-foreground/65'
                   }`}
               >
                 {item.name}
@@ -97,7 +97,7 @@ export function Navigation() {
                   onClick={() => setIsOpen(false)}
                   className={`block px-4 py-3 text-lg font-medium rounded-lg transition-colors ${pathname === item.href
                     ? 'bg-primary/10 text-primary'
-                    : 'text-muted-foreground hover:bg-white/5 dark:hover:bg-white/5'
+                    : 'text-foreground/70 hover:bg-white/10 dark:hover:bg-white/10'
                     }`}
                 >
                   {item.name}

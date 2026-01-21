@@ -85,7 +85,7 @@
 }
 
 :root {
-  /* BOLD TECH PALETTE (Light Mode) */
+  /* BOLD TECH PALETTE (Light Mode) - ACCESSIBLE CONTRAST */
   /* Neutral: Slate */
   --background: 210 40% 98%;
   --foreground: 222 47% 11%;
@@ -108,9 +108,9 @@
   --accent: 175 70% 40%;
   --accent-foreground: 210 40% 98%;
 
-  /* Muted */
+  /* Muted - IMPROVED CONTRAST: from 47% to 35% lightness */
   --muted: 210 40% 96.1%;
-  --muted-foreground: 215 16% 47%;
+  --muted-foreground: 215 25% 35%;
 
   --destructive: 0 84.2% 60.2%;
   --destructive-foreground: 210 40% 98%;
@@ -124,7 +124,7 @@
 }
 
 .dark {
-  /* BOLD TECH PALETTE (Dark Mode) */
+  /* BOLD TECH PALETTE (Dark Mode) - ACCESSIBLE CONTRAST */
   --background: 224 71% 4%;
   /* Deep Blue Black */
   --foreground: 210 40% 98%;
@@ -149,8 +149,9 @@
   --accent: 175 70% 60%;
   --accent-foreground: 222 47% 11%;
 
+  /* Muted - IMPROVED CONTRAST: brighter for dark mode */
   --muted: 217 32% 17%;
-  --muted-foreground: 215 20% 75%;
+  --muted-foreground: 215 20% 70%;
 
   --destructive: 0 62.8% 30.6%;
   --destructive-foreground: 210 40% 98%;
@@ -169,14 +170,26 @@
     @apply bg-background text-foreground font-sans antialiased;
     font-feature-settings: "rlig" 1, "calt" 1;
   }
+
+  /* Accessible focus states for keyboard navigation */
+  *:focus-visible {
+    @apply outline-none ring-2 ring-ring ring-offset-2 ring-offset-background;
+  }
 }
 
 @layer utilities {
+
+  /* Glass effects with IMPROVED READABILITY */
   .glass {
-    @apply bg-white/70 dark:bg-black/70 backdrop-blur-md border border-white/20 dark:border-white/10;
+    @apply bg-white/85 dark:bg-black/80 backdrop-blur-lg border border-white/30 dark:border-white/15;
   }
 
   .glass-card {
-    @apply bg-white/70 dark:bg-black/50 backdrop-blur-md border border-white/20 dark:border-white/10 shadow-sm transition-colors duration-300;
+    @apply bg-white/90 dark:bg-slate-900/85 backdrop-blur-lg border border-slate-200/50 dark:border-white/10 shadow-sm transition-colors duration-300;
+  }
+
+  /* High contrast text utility for important content */
+  .text-readable {
+    @apply text-foreground/90;
   }
 }

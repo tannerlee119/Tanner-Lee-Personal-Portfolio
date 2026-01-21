@@ -108,7 +108,7 @@ export default function ResumePage() {
           className="text-center space-y-6"
         >
           <h1 className="text-4xl md:text-5xl font-bold tracking-tight">Resume</h1>
-          <p className="text-xl text-muted-foreground">My professional journey and technical expertise.</p>
+          <p className="text-xl text-foreground/70">My professional journey and technical expertise.</p>
           <Button onClick={handleDownloadResume} className="gap-2" size="lg">
             <Download className="w-4 h-4" /> Download PDF
           </Button>
@@ -139,14 +139,14 @@ export default function ResumePage() {
                           <CardTitle className="text-xl font-bold">{item.role}</CardTitle>
                           <Badge variant="secondary" className="w-fit">{item.period}</Badge>
                         </div>
-                        <div className="flex items-center gap-2 text-muted-foreground font-medium">
+                        <div className="flex items-center gap-2 text-foreground/70 font-medium">
                           <Briefcase className="w-4 h-4" /> {item.company}
                           <span className="mx-2">•</span>
                           <MapPin className="w-4 h-4" /> {item.location}
                         </div>
                       </CardHeader>
                       <CardContent>
-                        <ul className="space-y-2 text-muted-foreground text-sm list-disc list-inside">
+                        <ul className="space-y-2 text-foreground/75 text-sm list-disc list-inside">
                           {item.achievements.map((achievement, i) => (
                             <li key={i}>{achievement}</li>
                           ))}

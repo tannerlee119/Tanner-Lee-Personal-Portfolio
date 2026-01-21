@@ -32,7 +32,7 @@ export default function AboutPage() {
           className="text-center space-y-6"
         >
           <h1 className="text-4xl md:text-5xl font-bold tracking-tight">About Me</h1>
-          <p className="text-xl text-muted-foreground max-w-2xl mx-auto leading-relaxed">
+          <p className="text-xl text-foreground/70 max-w-2xl mx-auto leading-relaxed">
             I am a passionate software developer recently graduated from UW-Madison,
             driven by curiosity and a deep love for building meaningful solutions.
           </p>
@@ -44,7 +44,7 @@ export default function AboutPage() {
           whileInView={{ opacity: 1 }}
           viewport={{ once: true }}
           transition={{ delay: 0.2 }}
-          className="prose prose-lg dark:prose-invert max-w-none text-muted-foreground space-y-6"
+          className="prose prose-lg dark:prose-invert max-w-none text-foreground/75 space-y-6"
         >
           <p>
             My journey into technology began with a simple curiosity about how things work.
@@ -98,7 +98,7 @@ export default function AboutPage() {
                     </div>
                     <div>
                       <h3 className="font-semibold text-foreground">{interest.name}</h3>
-                      <p className="text-sm text-muted-foreground">{interest.description}</p>
+                      <p className="text-sm text-foreground/70">{interest.description}</p>
                     </div>
                   </CardContent>
                 </Card>

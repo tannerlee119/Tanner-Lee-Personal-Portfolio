@@ -29,10 +29,10 @@ export function Hero() {
             <h1 className="text-5xl sm:text-7xl font-bold tracking-tight mb-6">
               Tanner Lee<span className="text-blue-500">.</span>
             </h1>
-            <h2 className="text-3xl sm:text-4xl font-semibold text-muted-foreground mb-6">
+            <h2 className="text-3xl sm:text-4xl font-semibold text-foreground/70 mb-6">
               Software Developer
             </h2>
-            <p className="text-lg text-muted-foreground max-w-2xl mx-auto lg:mx-0 leading-relaxed">
+            <p className="text-lg text-foreground/75 max-w-2xl mx-auto lg:mx-0 leading-relaxed">
               Recent Computer Science graduate from UW-Madison tailored for building scalable,
               high-performance web applications. I craft digital experiences that are
               fast, accessible, and visually stunning.
@@ -63,13 +63,13 @@ export function Hero() {
             transition={{ duration: 0.5, delay: 0.4 }}
             className="flex gap-6 justify-center lg:justify-start pt-4"
           >
-            <a href="https://github.com/tannerlee119" target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-blue-500 transition-colors">
+            <a href="https://github.com/tannerlee119" target="_blank" rel="noopener noreferrer" aria-label="GitHub Profile" className="text-foreground/60 hover:text-blue-500 transition-colors">
               <Github className="w-6 h-6" />
             </a>
-            <a href="https://linkedin.com/in/tannerlee119" target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-blue-500 transition-colors">
+            <a href="https://linkedin.com/in/tannerlee119" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn Profile" className="text-foreground/60 hover:text-blue-500 transition-colors">
               <Linkedin className="w-6 h-6" />
             </a>
-            <a href="mailto:tanner.lee2022@outlook.com" className="text-muted-foreground hover:text-blue-500 transition-colors">
+            <a href="mailto:tanner.lee2022@outlook.com" aria-label="Send Email" className="text-foreground/60 hover:text-blue-500 transition-colors">
               <Mail className="w-6 h-6" />
             </a>
           </motion.div>

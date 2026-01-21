@@ -40,7 +40,7 @@ export default function ContactPage() {
           className="text-center mb-16 space-y-4"
         >
           <h1 className="text-4xl md:text-5xl font-bold tracking-tight">Get in Touch</h1>
-          <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
+          <p className="text-xl text-foreground/70 max-w-2xl mx-auto">
             Open to new opportunities, collaborations, or just a friendly chat.
           </p>
         </motion.div>
@@ -61,7 +61,7 @@ export default function ContactPage() {
                       <method.icon className="w-5 h-5" />
                     </div>
                     <div className="flex-1 min-w-0">
-                      <p className="text-sm font-medium text-muted-foreground">{method.label}</p>
+                      <p className="text-sm font-medium text-foreground/65">{method.label}</p>
                       {method.href ? (
                         <a href={method.href} className="text-foreground font-semibold hover:text-blue-500 transition-colors truncate block">
                           {method.value}
@@ -100,7 +100,7 @@ export default function ContactPage() {
                 <CardTitle className="text-2xl">Let&apos;s build something together.</CardTitle>
               </CardHeader>
               <CardContent className="space-y-6">
-                <p className="text-muted-foreground leading-relaxed">
+                <p className="text-foreground/75 leading-relaxed">
                   I&apos;m currently looking for full-time software development roles.
                   If you have an interesting project or position, please reach out!
                 </p>

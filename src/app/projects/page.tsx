@@ -107,7 +107,7 @@ export default function ProjectsPage() {
                     className="text-center mb-16"
                 >
                     <h1 className="text-4xl md:text-5xl font-bold mb-6 tracking-tight">Featured Projects</h1>
-                    <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
+                    <p className="text-xl text-foreground/70 max-w-2xl mx-auto">
                         A showcase of my technical journey, featuring full-stack applications,
                         mobile apps, and interactive experiments.
                     </p>
@@ -161,7 +161,7 @@ export default function ProjectsPage() {
                                 </CardHeader>
 
                                 <CardContent className="space-y-4">
-                                    <p className="text-sm text-muted-foreground line-clamp-3">
+                                    <p className="text-sm text-foreground/75 line-clamp-3">
                                         {project.longDescription}
                                     </p>
 
