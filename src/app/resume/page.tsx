@@ -1,7 +1,7 @@
 'use client'
 
 import { motion } from 'framer-motion'
-import { Download, ArrowUpRight } from 'lucide-react'
+import { Download } from 'lucide-react'
 
 const experiences = [
   {
