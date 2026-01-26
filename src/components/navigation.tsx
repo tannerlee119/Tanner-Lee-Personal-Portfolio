@@ -3,7 +3,7 @@
 import { useState, useEffect } from 'react'
 import Link from 'next/link'
 import { usePathname } from 'next/navigation'
-import { Menu, X } from 'lucide-react'
+import { Menu, X, Github, Linkedin, Mail } from 'lucide-react'
 import { motion, AnimatePresence } from 'framer-motion'
 
 const navigationItems = [
@@ -59,6 +59,38 @@ export function Navigation() {
                 {item.name}
               </Link>
             ))}
+            
+            {/* Social icons separator */}
+            <span className="text-muted-foreground/30">|</span>
+            
+            {/* Social icons */}
+            <div className="flex items-center gap-4">
+              <a 
+                href="https://github.com/tannerlee119" 
+                target="_blank" 
+                rel="noopener noreferrer" 
+                aria-label="GitHub Profile"
+                className="text-muted-foreground hover:text-foreground transition-colors duration-300"
+              >
+                <Github className="w-4 h-4" />
+              </a>
+              <a 
+                href="https://linkedin.com/in/tannerlee119" 
+                target="_blank" 
+                rel="noopener noreferrer" 
+                aria-label="LinkedIn Profile"
+                className="text-muted-foreground hover:text-foreground transition-colors duration-300"
+              >
+                <Linkedin className="w-4 h-4" />
+              </a>
+              <a 
+                href="mailto:tanner.lee2022@outlook.com" 
+                aria-label="Send Email"
+                className="text-muted-foreground hover:text-foreground transition-colors duration-300"
+              >
+                <Mail className="w-4 h-4" />
+              </a>
+            </div>
           </nav>
 
           {/* Mobile menu button */}
