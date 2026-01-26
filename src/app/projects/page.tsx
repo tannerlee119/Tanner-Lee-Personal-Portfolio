@@ -5,6 +5,16 @@ import { ArrowUpRight, Github } from 'lucide-react'
 
 const projects = [
     {
+        title: 'Personal Travel Diary',
+        description: 'A collaborative travel planning and journaling web application for couples and groups to plan, document, and relive trips together.',
+        longDescription: 'Built with Next.js 16, React 19, TypeScript, and Tailwind CSS 4 using Supabase for auth and database. Features an interactive world map with Mapbox for trip visualization, kanban-style itinerary planning with drag-and-drop scheduling, comprehensive trip documentation including restaurant reviews, activity logs, and photo galleries with HEIC conversion, multi-user collaboration with per-user color coding, and AWS S3 integration for photo storage.',
+        image: '/projects/dubu-diaries.png',
+        technologies: ['Next.js', 'TypeScript', 'Supabase', 'Mapbox', 'AWS S3'],
+        githubUrl: null,
+        liveUrl: 'https://dubu-diaries.vercel.app',
+        featured: true
+    },
+    {
         title: 'Eat with Lee',
         description: 'A modern food blogging website for restaurant reviews, ratings, and location-based culinary discovery.',
         longDescription: 'Built with Next.js 15, TypeScript, and Tailwind CSS featuring a clean, news-inspired design. Includes detailed restaurant reviews with ratings and photos, interactive location-based restaurant discovery, tagging system for cuisines, admin dashboard for review management, and social media integration.',
