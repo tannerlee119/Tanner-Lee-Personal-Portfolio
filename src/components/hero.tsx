@@ -4,6 +4,13 @@ import { motion } from 'framer-motion'
 import { Github, Linkedin, Mail, ArrowUpRight } from 'lucide-react'
 import Link from 'next/link'
 
+const navigationItems = [
+  { name: 'Work', href: '/projects' },
+  { name: 'About', href: '/about' },
+  { name: 'Contact', href: '/contact' },
+  { name: 'Resume', href: '/resume' }
+]
+
 export function Hero() {
   return (
     <section className="min-h-screen flex flex-col items-center justify-center px-6 relative">
@@ -67,11 +74,34 @@ export function Hero() {
         </motion.div>
       </div>
 
+      {/* Bottom navigation links */}
+      <motion.nav
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        transition={{ duration: 0.6, delay: 0.7 }}
+        className="absolute bottom-24 left-0 right-0 flex justify-center items-center gap-3"
+      >
+        {navigationItems.map((item, index) => (
+          <div key={item.name} className="flex items-center gap-3">
+            <Link
+              href={item.href}
+              className="text-xs sm:text-sm uppercase tracking-[0.15em] text-muted-foreground 
+                         transition-all duration-300 hover:text-foreground hover:tracking-[0.25em]"
+            >
+              {item.name}
+            </Link>
+            {index < navigationItems.length - 1 && (
+              <span className="text-muted-foreground/40">/</span>
+            )}
+          </div>
+        ))}
+      </motion.nav>
+
       {/* Bottom social links */}
       <motion.div
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
-        transition={{ duration: 0.6, delay: 0.7 }}
+        transition={{ duration: 0.6, delay: 0.9 }}
         className="absolute bottom-12 left-0 right-0 flex justify-center gap-8"
       >
         <a 
